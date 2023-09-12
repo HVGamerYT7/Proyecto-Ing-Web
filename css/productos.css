@@ -1,0 +1,27 @@
+body
+{
+    display: block;
+    margin: 0%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.Barraheader
+{
+    display: flex;
+    align-items: center;
+    margin: 0%;
+}
+
+h2{
+    display: flex;
+}
+
+p
+{
+    display: flex;
+}
+

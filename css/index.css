@@ -1,0 +1,55 @@
+body
+{
+    display: block;
+    margin: 0%;
+}
+
+header{
+    display: flex;
+    margin: 0%;
+}
+ul
+{
+    display: flex;
+    margin: 0%;
+}
+
+h2
+{
+    margin-inline: 20px;
+}
+
+.headerMedio
+{
+    padding-left: 40%;
+    padding-right: 30%;
+}
+
+p
+{
+    margin-inline: 20px;
+}
+
+.Barradeheader
+{
+    display: flex;
+
+}
+
+
+.Logo
+{
+    padding: 1%;
+    padding-top: 2%;
+    display: flex;
+}
+
+
+.Mediopagina
+{
+    display: flex;
+    background-image: url(/img/bano-de-bosque-epu.webp);
+}
+
+
+
