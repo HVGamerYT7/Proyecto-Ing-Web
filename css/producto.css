@@ -44,9 +44,14 @@ main{
 }
 
 
-#contenedor-producto > button{
+#boton-compra{
     position: absolute;
     top: 530px;
-    left: 430px;
+    left: 300px;
 }
 
+#boton-lista-deseados{
+    position: absolute;
+    top: 530px;
+    left: 370px;
+}
