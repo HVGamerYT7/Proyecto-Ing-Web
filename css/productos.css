@@ -1,27 +1,173 @@
-body
+:root
+{
+    ---fondo : #242118;
+    ---letras : #D9D9D9;
+    ---cafe : #757357;
+    ---cafeclaro : #9C986B;
+    ---oscuro : #1E1E1E;
+}
+
+html
+{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+header
+{
+    display: flex;
+    background-color: var(---fondo);
+}
+
+.logo
+{
+    align-items: start;
+    max-height: 5rem;
+    max-width: 5rem;
+}
+
+
+.contenedor
+{
+    width: 50rem;
+    margin: auto;
+}
+.navegador-header
+{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegador-header a
+{
+    font-size: 1.8rem;
+    font-weight: 1.8rem;
+    color: var(---letras);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.navegador-header a:hover
+{
+    background-color: var(---cafeclaro);
+}
+
+.hero
+{
+    background-image: url(../img/bano-de-bosque-epu.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 61rem;
+    padding: 0rem;
+    position: relative;
+}
+
+.contenido-hero
+{
+    position: absolute;
+    display: flex;
+    background-color: rgb(0,0,0,0.7);
+    height: 100%;
+    width: 100%;
+}
+
+.barralateral
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(---letras);
+}
+
+.barra-medio-body
+{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.barra-medio-body nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-medio-body nav,a
+{
+    font-size: 1.8rem;
+    font-weight: 1.8rem;
+    color: var(---letras);
+    text-decoration: none;
+}
+
+.barra-medio-body form
+{
+    padding: 1rem;
+}
+
+.contenido-hero div
+{
+    color: var(---letras);
+}
+
+.buscador
+{
+    width: 100rem;
+}
+
+.barra-medio-body > div
+{
+    margin-top: 1rem;
+    color: var(---letras);
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.contenido-seccion-productos
 {
     display: block;
-    margin: 0%;
+    height: 100%;
+    width: 100%;
 }
 
-header{
-    display: flex;
-    align-items: center;
-}
-
-.Barraheader
+.barra-productos
 {
     display: flex;
-    align-items: center;
-    margin: 0%;
+    justify-content: space-evenly;
 }
 
-h2{
-    display: flex;
-}
-
-p
+.precio-producto
 {
-    display: flex;
+    margin: 0%;
+    padding: 1rem;
+    background-color: var(---letras);
+    color: black;
+    text-align: center;
+    padding: 5rem;
 }
 
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.producto > h2,p
+{
+    padding: 2rem;
+    margin: 0%;
+    font-size: x-large;
+   text-align: center;
+}
