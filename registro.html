@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/formularios.css"/>
+    </head>
+    <body>
+
+      <header>
+           
+      </header>
+      <section>
+          <form id="formulario" novalidate>
+              <ul>
+                <li>
+                  <label>Correo electrónico</label>
+                  <input type="email" id="email" required/>
+                  <span id="mensaje" class="mensajeError"></span>
+                </li>
+                <li>
+                  <label>Rut (sin puntos)</label>
+                  <input type="text" id="rut" required />
+                  <span id="mensaje" class="mensajeError"></span>
+                </li>
+                <li>
+                  <label>Region</label>
+                  <select name="regiones">
+                    <option>Valparaiso</option>
+                    <option>Arica</option>
+                  </select>
+                </li>
+                <li>
+                  <label>Comuna</label>
+                  <select name="comunas">
+                    <option>Villa Alemana</option>
+                    <option>Valparaiso</option>
+                  </select>
+                </li>
+                <li>
+                  <label>Contraseña</label>
+                  <input type="password" id="contra" required />
+                  <span id="mensaje" class="mensajeError"></span>
+                </li>
+                <li>
+                  <label>Confirmación Contraseña</label>
+                  <input type="password" id="recontra" required/>
+                </li>
+                <p>
+                <input type="checkbox" name="accept" id="accept">
+                <label>Acepto terminos y condiciones</label>
+                </p>
+                <li>
+                  <button>Registrarse</button>
+                </li>
+                <li>
+                <button id="btnGoogleLogin" class="google-button">
+                    <img id="googleLogo" src="img/googleLogo.png" alt="Registrar con Google">
+                    Registrarse con google
+                </button>
+                </li>
+                <li>
+                  <button onclick="window.location.href='login.html'">Volver</button>
+                </li>        
+              </ul>
+          </form>
+      </section>
+          <script src="js/validaciones.js"></script>
+    </body>
+</html>
