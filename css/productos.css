@@ -62,7 +62,8 @@ header
     background-image: url(../img/bano-de-bosque-epu.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 61rem;
+    height: 64.7rem;
+    max-width: 100%;
     padding: 0rem;
     position: relative;
 }
