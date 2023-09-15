@@ -38,6 +38,7 @@ footer{
     border-bottom-color: red; /* Color del borde inferior */
     border-bottom-width: 2px; /* Ancho del borde inferior */
     padding-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .producto > button{
@@ -46,7 +47,7 @@ footer{
 
 .producto > div{
     display: flex;
-    gap: 30px;
+    gap: 15px;
 
 }
 
