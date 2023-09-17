@@ -1,5 +1,8 @@
 ﻿\*Tipografía
 
+\*Descripcion
+------
+
 \*Tecnologías a usar
 
 |Tecnología|Uso|
