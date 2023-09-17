@@ -2,68 +2,13 @@
 
 \*Tecnologías a usar
 
-- Backend: Nodejs-Express
-- Base de datos: MySql workbench
-- Frontend: ReactJs-Bootstrap 
-- Maquetación: Figma-Marvel app-Bootstrap Studio
-- Organización: Trello, Drive
-
-\*Problema a solucionar
-
-\*La propuesta
-
-\*Procesos de negocios 
-
-\*Requerimientos Funcionales
-
-\*Requerimientos no funcionales
-
-\*Maquetación Figma 
-
-\*Estructura (Comunicación de los sistemas)
-
-\*Casos de uso
-
-\*Diagramas de secuencia
-
-\*Diagrama de clases
-
-E-Comermer de una tienda mayorista y minorista con el medio ambiente
-
-Usuarios: Personas comunes - Administradores - Emprensas
-
-login- personas comunes y administradores.
-
-Registro-Tener un registro|
-
-Sistema de muestra de productos y recomendación
-
-carrito de compra
-
-sistema de busqueda
-
-sistema de comentarios y clasificación del producto
-
-Proceso de verificación para ser empresas (Rut de empresas)
-
-Sistema de juego
-
-Sistema de descuentos
-
-Modulo de productos deseados
-
-
-Modulo que permita subir productos y editarlos
-
-Modulo que permita mostrar a los usuarios
-
-Modulo que permita mostrar tablas graficas 
-
-
-\*Sistema que permita enviar materiales para reciclaje
-
-\*Notificaciones al gmail
-
+|Tecnología|Uso|
+| :- | :- |
+|Nodejs-Express|Backend|
+|Base de datos|MySql workbench|
+|Frontend|ReactJs-Bootstrap |
+|Maquetación|Figma|
+|Organización|Trello, Drive|
 
 |**Clave**|**Requerimiento**|**Casos de uso**|
 | :- | :- | :- |
