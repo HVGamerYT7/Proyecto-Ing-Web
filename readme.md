@@ -2,6 +2,7 @@
 
 \*Descripcion
 ------
+Green heart esta nacido atravez de a problematica de que existen empresas independientes muy dispersas que hacen productos amigables con el medio ambiente , pero que estas trabajan un producto en concreto, para asi aprovechar las nuevas leyes para disminuir los desechos toxicos (por ejemplo el mas conocido como los plasticos), siendo esto un impulso de aprovechar esta oportunidad de ser un punto de encuentro entre Empresas, distrubiudoras, pymes y 
 
 \*Tecnologías a usar
 
