@@ -84,7 +84,7 @@ A continuación se presentan los casos de uso:
 
 <div align="center">
   <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/main/imgReadme/casosuso.png" alt="Casos de Uso">
-  <p>Casos de Uso</p>
+  <p>Figura 1. Casos de Uso</p>
 </div>
 
 \-Maquetas
@@ -94,10 +94,60 @@ Se presentan las maquetas realizadas en figma:
 
 <div align="center">
   <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/busqueda.jpeg" alt="Busqueda">
-  <p>Busqueda</p>
+  <p>Figura 2. Busqueda</p>
 </div>
 
 <div align="center">
   <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/carrito.jpeg" alt="Carrito">
-  <p>Carrito</p>
+  <p>Figura 3. Carrito</p>
 </div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/inicio.jpeg" alt="Inicio">
+  <p>Figura 4. Inicio</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/listadeseados.jpeg" alt="Lista de deseados">
+  <p>Figura 5. Lista de deseados</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/listaproductos.jpeg" alt="Lista de Productos">
+  <p>Figura 6. Lista de Productos</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/listausuarios.jpeg" alt="Lista de Usuarios">
+  <p>Figura 7. Lista de Usuarios</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/login.jpeg" alt="Login">
+  <p>Figura 8. Login</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/producto.jpeg" alt="Producto">
+  <p>Figura 9. Producto</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/registro.jpeg" alt="Registro">
+  <p>Figura 10. Registro</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/sobre-nosotros.jpeg" alt="Sobre Nosotros">
+  <p>Figura 11. Sobre Nosotros</p>
+</div>
+
+<div align="center">
+  <img src="" alt="Terminos y condiciones">
+  <p>Figura 12. Terminos y condiciones/p>
+</div>
+
+\-Maquetas
+---
+
+Para revisar correctamente todas nuestras pantallas HTML, abrir con Live Server cada archivo de forma independiente.
