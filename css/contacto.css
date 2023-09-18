@@ -37,6 +37,7 @@ header
     width: 6rem;
 }
 
+
 .contenedor
 {
     width: 50rem;
@@ -130,52 +131,45 @@ header
     width: 100rem;
 }
 
-.barra-medio-body > div
+.barra-medio-body div
 {
     margin-top: 1rem;
+    margin-left: 19rem;
+    margin-right: 19rem;
+    margin-bottom: 5rem;
     color: var(---letras);
-    height: 100%;
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    height: 100rem;
+    width: 100rem;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-.contenido-seccion-productos
+.contendor-de-columnas
 {
-    display: block;
-    height: 100%;
+    height:100%;
     width: 100%;
-    margin: 0%;
-}
-
-.barra-productos
-{
+    padding: 0%;
     display: flex;
+    text-align: center;
     justify-content: space-evenly;
 }
 
-.precio-producto
-{
-    margin: 0%;
-    padding: 1rem;
-    background-color: var(---letras);
-    color: black;
-    text-align: center;
-    padding: 5rem;
-}
-
-.producto{
+.columna{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
 }
 
+.columna > h2{
+    margin-top: 10rem;
+}
 
-.producto > h2,p
-{
-    padding: 2rem;
-    margin: 0%;
-    font-size: x-large;
-   text-align: center;
+.columna > p{
+    margin-top: 10rem;
+    max-width: 20rem;
+}
+
+.columna > img{
+    margin-top: 5rem;
+    width: 15rem;
+    max-height: 20rem;
 }

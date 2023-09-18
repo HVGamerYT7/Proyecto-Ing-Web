@@ -23,15 +23,25 @@ ul li{
 
 main{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-#comentarios > ul > li >img {
+#producto{
+    width: 500px;
+}
+
+#comentarios{
+    width: 400px;
+}
+
+#comentarios > ul > li >img{
     width: 100px;
     height: 100px;
     border-radius: 100%;
 
 }
+
 #contenedor-producto {
     width: 500px;
     height: 500px;

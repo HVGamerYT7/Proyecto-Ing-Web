@@ -4,52 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
     <header>
-        <section class="Logo">
-            <p>
-                Logo empresa
-            </p>
-        </section>
-        <section class="Barradeheader">
-            <h2>
-                Tienda
-            </h2>
-            <h2>
-                Cercania
-            </h2>
-            <h2>
-                Nosotros
-            </h2>
-            <h2>
-                Soporte
-            </h2>
-            <p class="Logo perfil">
-                logo de perfil
-            </p>
-            <p class="Logo Carrito">
-                logo de carrito
-            </p>
-        </section>
-    </header>
-    <section>
-        <aside>
-            <h3>Categorias</h3>
-            <p>---</p>
-            <p>---</p>
-            <p>---</p>
-            <p>---</p>
-        </aside>
-        <nav>
-            <h3>Nuevo</h3>
-            <h3>Categorias</h3>
-            <h3>Puntos</h3>
-            <h3>Noticias</h3>
-            <h3>Laboratorio</h3>
+        <a class="logo" href="index.html"><img src="/img/informatic tree.png" alt="logo" /></a>
+        <nav class="navegador-header contenedor">
+            <a href="productos.html">Tienda</a>
+            <a href="terminos-y-condiciones.html">Terminos</a>
+            <a href="sobre-nosotros.html">Nosotros</a>
+            <a href="contacto.html">Soporte</a>
         </nav>
+        <div class="logos-header">
+            <img src="/img/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" >
+            <img src="/img/shopping_cart_FILL0_wght400_GRAD0_opsz48.png" alt="">
+        </div>
+    </header>
+    <section class="hero">
+        <div class="contenido-hero">
+            <aside class="barralateral">
+                <h2>
+                    Categorias
+                </h2>
+                <p>----</p>
+                <p>----</p>
+                <p>----</p>
+                <p>----</p>
+            </aside>
+            <div class="barra-medio-body">
+                <nav>
+                    <a href="">Nuevo</a>
+                    <a href="">Categorias</a>
+                    <a href="">Puntos</a>
+                    <a href="">Noticias</a>
+                    <a href="">Laboratorio</a>
+                </nav>
+                <form>
+                    <input class="buscador" type="text" placeholder="Buscador">
+                    <button type="submit">Buscar</button>
+                </form>
+                <div>
+                    <ul class="contendor-de-columnas">
+                        <section class="columna">
+                            <h2>Correo</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos placeat accusantium itaque ut dolores cum! Quisquam quia commodi dolores laborum repellendus quam, enim itaque perferendis, laboriosam iste voluptas magnam vel.</p>
+                        </section>
+                        <section class="columna">
+                            <h2>Numero</h2>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere cumque quasi laborum totam laboriosam velit illum? Nemo eos impedit, laborum vero iste voluptatem magni eum dolor officia minima non aliquam?</p>
+                        </section>
+                        <section class="columna">
+                            <h2>Direccion</h2>
+                            <img src="/img/share_location_FILL0_wght400_GRAD0_opsz24 (1).png" alt="">
+                            <p></p>
+                        </section>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
-

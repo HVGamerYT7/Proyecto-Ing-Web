@@ -4,59 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sobre-nosotros.css">
 </head>
 <body>
     <header>
-        <section class="Logo">
-            <p>
-                Logo empresa
-            </p>
-        </section>
-        <section class="Barradeheader">
-            <h2>
-                Tienda
-            </h2>
-            <h2>
-                Cercania
-            </h2>
-            <h2>
-                Nosotros
-            </h2>
-            <h2>
-                Soporte
-            </h2>
-            <p class="Logo perfil">
-                logo de perfil
-            </p>
-            <p class="Logo Carrito">
-                logo de carrito
-            </p>
-        </section>
+        <a class="logo" href="index.html"><img src="/img/informatic tree.png" alt="logo" /></a>
+        <nav class="navegador-header contenedor">
+            <a href="productos.html">Tienda</a>
+            <a href="terminos-y-condiciones.html">Terminos</a>
+            <a href="sobre-nosotros.html">Nosotros</a>
+            <a href="contacto.html">Soporte</a>
+        </nav>
+        <div class="logos-header">
+            <img src="/img/account_circle_FILL0_wght400_GRAD0_opsz48.png" alt="" >
+            <img src="/img/shopping_cart_FILL0_wght400_GRAD0_opsz48.png" alt="">
+        </div>
     </header>
-    <section class="Barra Lateral">
-        <aside>
-            <h3>Categorias</h3>
-            <p>---</p>
-            <p>---</p>
-            <p>---</p>
-            <p>---</p>
-        </aside>
-    </section>
-    <section class="barra de busqueda">
-        <p>barra de busqueda</p>
-    </section>
-    <section class="centro de Nosotros">
-        <h2>
-            Nosotros
-        </h2>
-        <li>
-            <p>imgane 1</p>
-            <p>imagen 2</p>
-            <p>imagen 3</p>
-        </li>
-        <h2>Texto</h2>
+    <section class="hero">
+        <div class="contenido-hero">
+            <aside class="barralateral">
+                <h2>
+                    Categorias
+                </h2>
+                <p>----</p>
+                <p>----</p>
+                <p>----</p>
+                <p>----</p>
+            </aside>
+            <div class="barra-medio-body">
+                <nav>
+                    <a href="">Nuevo</a>
+                    <a href="">Categorias</a>
+                    <a href="">Puntos</a>
+                    <a href="">Noticias</a>
+                    <a href="">Laboratorio</a>
+                </nav>
+                <form>
+                    <input class="buscador" type="text" placeholder="Buscador">
+                    <button type="submit">Buscar</button>
+                </form>
+                <div class="Nosotros">
+                    <h2>Nosotros</h2>
+                    <ul class="contendor-de-imagenes">
+                        <div class="contendor-imagen">
+                            <p>imagen</p>
+                        </div>
+                        <div class="contendor-imagen">
+                            <p>imagen</p>
+                        </div>
+                        <div class="contendor-imagen">
+                            <p>imagen</p>
+                        </div>
+                    </ul>
+                    <p>
+                        texto
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
-
