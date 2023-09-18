@@ -8,9 +8,9 @@ En base a lo anterior, este proyecto se está realizando para la asignatura inge
 --------
 Con las siguientes herramientas vamos a trabajar:
 
-|Tecnología|Uso|
+|Uso|Tecnología|
 | :- | :- |
-|Nodejs-Express|Backend|
+|Backend|Nodejs-Express|
 |Base de datos|MySql workbench|
 |Frontend|ReactJs-Bootstrap |
 |Maquetación|Figma|
@@ -81,5 +81,23 @@ En la siguiente tabla, se dan a conocer los principales requerimientos del softw
 \-Casos de uso
 ---
 A continuación se presentan los casos de uso:
-![CasosUso](https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/main/imgReadme/casosuso.png)
 
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/main/imgReadme/casosuso.png" alt="Casos de Uso">
+  <p>Casos de Uso</p>
+</div>
+
+\-Maquetas
+---
+Se presentan las maquetas realizadas en figma:
+<a href="https://www.figma.com/file/NjzQ3luHXtIJpk6XFp8znu/alpha-proyect-web?type=design&node-id=0%3A1&mode=design&t=Yq5Vnin0aGm4c4s4-1">Link de figma</a>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/busqueda.jpeg" alt="Busqueda">
+  <p>Busqueda</p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/carrito.jpeg" alt="Carrito">
+  <p>Carrito</p>
+</div>
