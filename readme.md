@@ -2,7 +2,7 @@
 ------
 Green heart esta nacido atravez de la problematica de que existen empresas independientes muy dispersas dentro del territorio Chileno que hacen productos amigables con el medio ambiente , pero estas trabajan un producto en concreto o no tiene variedades por lo que se tiene conocimiento es que Chile no es un pais productor, si no, uno importador. Tomando ambos casos tambien queremos aprovechar las nuevas leyes aprobadas en Chile para disminuir los desechos toxicos y dañinos al medio ambiente (por ejemplo el mas conocido como los plasticos). Siendo esto una apertura de oportunidades de desarrollo a nivel nacional y uso Internacional. Ayudar a conectar Grandes Empresas que aun no tiene la completa seguridad y accebilidad de tener estos productos y amuentar las existencia de estos a sus clientes en tiendas y en sus propagandas , sin disminuir el consumo y aumentando el PIB con amuento de puestos de trabajo en estas Empresas, en paralelo crecer las pequeñas empresas productoras de los productos amigables con el medio ambiente. En este circulo tambien tendremos relaciones con: la gente comun (Fomenta la venta y uso proctos dañinos por su baja conciencia) , los mall Chinos (Alto uso de plasticos) , feriantes (uso de bolsas de plastico), entre otros. A sumiendo que se van a usar las herramientas ya disponibles de distribuiciones (Chile Express , entre otras).
 
-En base a lo anterior, este proyecto se está realizando para la asignatura ingeniería web, en donde Sebastian Santos, Hector Vera y Jonathan Vega son sus integrantes.
+En base a lo anterior, este proyecto se está realizando para la asignatura ingeniería web, en donde Sebastian Santos, Hector Vera y Jonathan Vega son sus integrantes. 
 
 \*Tecnologías a usar
 
