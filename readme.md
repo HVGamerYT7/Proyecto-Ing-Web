@@ -5,6 +5,7 @@ Green heart esta nacido atravez de la problematica de que existen empresas indep
 En base a lo anterior, este proyecto se está realizando para la asignatura ingeniería web, en donde Sebastian Santos, Hector Vera y Jonathan Vega son sus integrantes. 
 
 \-Tecnologías a usar
+--------
 Con las siguientes herramientas vamos a trabajar:
 
 |Tecnología|Uso|
@@ -16,6 +17,7 @@ Con las siguientes herramientas vamos a trabajar:
 |Organización|Trello, Drive|
 
 \-Requerimientos funcionales
+---
 En la siguiente tabla, se dan a conocer los principales requerimientos del software, dando también a conocer sus respectivos detalles y especificaciones.
 
 |**Clave**|**Requerimiento**|**Casos de uso**|
@@ -77,6 +79,7 @@ En la siguiente tabla, se dan a conocer los principales requerimientos del softw
 |**RF 11**|Módulo de administrador en donde se pueda administrar datos y visualizarlos.|administrar datos|
 
 \-Casos de uso
+---
 A continuación se presentan los casos de uso:
 ![CasosUso](https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/main/imgReadme/casosuso.png)
 
