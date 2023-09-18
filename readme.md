@@ -147,7 +147,7 @@ Se presentan las maquetas realizadas en figma:
   <p>Figura 12. Terminos y condiciones/p>
 </div>
 
-\-Maquetas
+\-Consideraciones finales
 ---
 
 Para revisar correctamente todas nuestras pantallas HTML, abrir con Live Server cada archivo de forma independiente.
