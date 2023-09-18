@@ -143,8 +143,8 @@ Se presentan las maquetas realizadas en figma:
 </div>
 
 <div align="center">
-  <img src="" alt="Terminos y condiciones">
-  <p>Figura 12. Terminos y condiciones/p>
+  <img src="https://github.com/HVGamerYT7/Proyecto-Ing-Web/blob/78d5bf2a9ddc81540afa9f27eb6ad49055928a7b/imgReadme/terminoscodiciones.jpeg" alt="Terminos y condiciones">
+  <p>Figura 12. Terminos y condiciones</p>
 </div>
 
 \-Consideraciones finales
