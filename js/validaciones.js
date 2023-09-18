@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded",function(){
          let contra=document.getElementById("contra").value;
          let recontra=document.getElementById("recontra").value;
          const coleccion=document.getElementById("formulario").getElementsByTagName("li");
+         evento.preventDefault();
          if(email==""){
-             
              coleccion[0].querySelector("span").innerHTML="Debe ingresar un correo electronico";
          }
          if(rut==""){
@@ -18,15 +18,14 @@ document.addEventListener("DOMContentLoaded",function(){
                 coleccion[1].querySelector("span").innerHTML="Rut inválido";
               }
          }
-         /*if(contra==""){
-          coleccion[3].querySelector("span").innerHTML="Debe ingresar una contraseña";
+         if(contra==""){
+          coleccion[4].querySelector("span").innerHTML="Debe ingresar una contraseña";
          }
          else{
           if(contra!=recontra){
-          coleccion[3].querySelector("span").innerHTML="Ambas contraseñas deben coincidir";
+          coleccion[5].querySelector("span").innerHTML="Ambas contraseñas deben coincidir";
           }
-        }*/
-      evento.preventDefault();
+        }
     }); 
     
     function validar(rut){
@@ -52,13 +51,41 @@ document.addEventListener("DOMContentLoaded",function(){
       
   }
 
-const btnGoogleLogin = document.getElementById("btnGoogleLogin");
-const googleLogo = document.getElementById("googleLogo");
+  var regiones = [];
+  $.getJSON('./assets/comunas-regiones.json', function (datos) {
+    regiones = datos;
+    $("#region").append('<option>--Seleccione región--</option>');
+    regiones.regiones.forEach(elemento => {
+      $("#region").append(`<option>${elemento.region}</option>`);
+    });
+  });
+  $("#region").on("change", function (a) {
+    $('#comuna').find('option').remove().end();
+    var region = $(this).children("option:selected").val();
+    console.log(region);
+    if (region !== "Seleccione una región") {
+      regiones.regiones.forEach(elemento => {
+        if (elemento.region == region) {
+          $("#comuna").append('<option>--Seleccione comuna--</option>');
+          elemento.comunas.forEach(comuna => {
+            $("#comuna").append(`<option>${comuna}</option>`);
+          });
+        }
+      })
+    }
+  });
 
-googleLogo.style.display = "none";
-
-btnGoogleLogin.addEventListener("click", function () {
-    googleLogo.style.display = "block";
-});
+  function btn(){
+    let terms=document.getElementById("terms").checked;
+    if(!terms){
+      document.getElementById("btnRegister").disabled = true;
+      document.getElementById("btnGoogleRegister").disabled = true;
+    }
+    else{
+      document.getElementById("btnRegister").disabled = false;
+      document.getElementById("btnGoogleRegister").disabled = false;
+    }
+  }
+  document.getElementById("terms").addEventListener("change",btn);
 
 });
