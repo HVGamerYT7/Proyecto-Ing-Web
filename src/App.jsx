@@ -1,33 +1,38 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import InicioSesion from './vistas/inisiosesion'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import Inicio from './vistas/inicio'
+import Productos from './vistas/productos'
+import CarritoCompra from './vistas/carritoCompra'
+import Pago from './vistas/pago'
+import VerificarPago from './vistas/verificarPago'
+import CargarDatos from './vistas/cargarDatos'
+import Perfil from './vistas/perfil'
+import Registrarse from './vistas/registrarse'
+import ListaDeseados from './vistas/listaDeseados'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Router>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Inicio></Inicio>}></Route>
+            <Route path='productos' element={<Productos></Productos>}></Route>
+            <Route path='carrito' element={<CarritoCompra></CarritoCompra>}></Route>
+            <Route path='pago' element={<Pago></Pago>}></Route>
+            <Route path='verificarPago' element={<VerificarPago></VerificarPago>}></Route>
+            <Route path='cargarDatos' element={<CargarDatos></CargarDatos>}></Route>
+            <Route path='perfil' element={<Perfil></Perfil>}></Route>
+            <Route path='listaDeseados' element={<ListaDeseados></ListaDeseados>}></Route>
+            <Route path='login'>
+              <Route index element={<InicioSesion></InicioSesion>}></Route>
+              <Route path='registrarse' element={<Registrarse></Registrarse>}></Route>
+            </Route>
+          </Route>
+        </Routes>
+      </Router>
     </>
   )
 }
