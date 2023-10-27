@@ -1,5 +1,9 @@
 function Inicio() {
-    return (<><h1>Inicio</h1></>);
+    return (<>
+    
+       
+    
+    </>);
 }
 
 export default Inicio;
