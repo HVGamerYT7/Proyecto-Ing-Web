@@ -1,7 +1,14 @@
+import './estilos/inicioPrueba.scss';
+import ContenedorProducto from './InicioPrueba/contenedorProducto';
+// import ContenedorProducto from './InicioPrueba/contenedorProducto';
+
+
 function InicioPrueba() {
     return ( 
         <div className="listaProductos">
-            <h1>Inicio Prueba</h1>
+            <ul>
+                <li><ContenedorProducto></ContenedorProducto></li>
+            </ul>
         </div>
     );
 }

@@ -1,0 +1,17 @@
+@import 'paletaColores';
+
+.listaProductos{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $calypso-200;
+
+    .contenedorProducto{
+        width: 280px;
+        height: 370px;
+
+        background-color: $calypso-50;
+        
+
+    }
+
+}
