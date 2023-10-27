@@ -8,7 +8,7 @@ class Producto{
 
     //Los metodos no reciben nada??
     
-    cambioNombre(String nombreNuevo){
+    cambioNombre(nombreNuevo){
         //Se le preguntara si de verdad quiere cambiar el nombre
         //si es asi se cambiara
         //en el otro caso se mantendra igual
@@ -22,7 +22,7 @@ class Producto{
 
     }
 
-    agregarResenia(string rut,string resenia){ 
+    agregarResenia(rut, resenia){ 
         //resivira el rut de la persona que desea escribir la reseña del producto y un string maximo de 200 caracteres
         //este validara que el rut existe y que el campo reseña no este vacio
         //se agregara
