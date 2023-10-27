@@ -1,4 +1,5 @@
-class Producto{
+class Producto{ //ID
+    id = '';
     nombre = '';
     imagen = ''; //Como vamos a representar la imagen el archivo se va a representar con un archivo jpg o png
     resenia = ''; //Cambiar la ñ
