@@ -1,0 +1,82 @@
+[
+    {
+      "id": "1",
+      "nombre": "Producto 1",
+      "url": "https://example.com/imagen1.jpg",
+      "valoración": "4.5",
+      "categoria": "Categoría 1",
+      "precio": "10.99"
+    },
+    {
+      "id": "2",
+      "nombre": "Producto 2",
+      "url": "https://example.com/imagen2.jpg",
+      "valoración": "3.2",
+      "categoria": "Categoría 2",
+      "precio": "5.99"
+    },
+    {
+      "id": "3",
+      "nombre": "Producto 3",
+      "url": "https://example.com/imagen3.jpg",
+      "valoración": "2.8",
+      "categoria": "Categoría 1",
+      "precio": "8.99"
+    },
+    {
+      "id": "4",
+      "nombre": "Producto 4",
+      "url": "https://example.com/imagen4.jpg",
+      "valoración": "4.1",
+      "categoria": "Categoría 3",
+      "precio": "12.99"
+    },
+    {
+      "id": "5",
+      "nombre": "Producto 5",
+      "url": "https://example.com/imagen5.jpg",
+      "valoración": "5",
+      "categoria": "Categoría 2",
+      "precio": "6.99"
+    },
+    {
+      "id": "6",
+      "nombre": "Producto 6",
+      "url": "https://example.com/imagen6.jpg",
+      "valoración": "3.9",
+      "categoria": "Categoría 1",
+      "precio": "9.99"
+    },
+    {
+      "id": "7",
+      "nombre": "Producto 7",
+      "url": "https://example.com/imagen7.jpg",
+      "valoración": "4.7",
+      "categoria": "Categoría 3",
+      "precio": "14.99"
+    },
+    {
+      "id": "8",
+      "nombre": "Producto 8",
+      "url": "https://example.com/imagen8.jpg",
+      "valoración": "2.5",
+      "categoria": "Categoría 2",
+      "precio": "7.99"
+    },
+    {
+      "id": "9",
+      "nombre": "Producto 9",
+      "url": "https://example.com/imagen9.jpg",
+      "valoración": "4.3",
+      "categoria": "Categoría 1",
+      "precio": "11.99"
+    },
+    {
+      "id": "10",
+      "nombre": "Producto 10",
+      "url": "https://example.com/imagen10.jpg",
+      "valoración": "3.7",
+      "categoria": "Categoría 3",
+      "precio": "13.99"
+    }
+  ]
