@@ -1,0 +1,72 @@
+@import 'paletaColores';
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $calypso-50;
+    
+}
+
+.contenedorInicio{
+    perspective: 1000px;
+    .imagenFondo{
+        background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url('src/assets/fondoInicio.jpg');
+        // width: 100%;
+        min-height: 80vh;
+        min-width: 90vh;
+        
+        padding: 10px 10px 10px 10px;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center;
+        ////background-size: contain;
+
+        //filter: brightness(0.55); 
+    }
+
+    header{
+        height: 60px;
+        background-color: $calypso-700;
+        filter: drop-shadow(0 0 2em $calypso-900);
+        
+
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 30px 0px 30px; // arriba derecha abajo izquierda
+        align-items: center;
+        
+        border-radius: 10px;
+
+        header, img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .botonNav{
+            border: none;
+            background: none;
+            outline: none;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+            margin: 0px;
+            color: $color-letra;
+            font-family: $fuente-preferida;
+            padding-left: 20px;
+            font-weight: bold; 
+            font-size: 20px; /* Cambia el tamaño según tus necesidades (puedes usar px, em, rem, %, etc.) */
+            background-color: rgba(255, 255, 255, 0);
+        }
+       
+    }
+
+    .titulo{
+        color: $color-letra;
+        font-family: $fuente-preferida;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
