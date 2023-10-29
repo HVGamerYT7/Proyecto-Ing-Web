@@ -1,26 +1,26 @@
 @import 'paletaColores';
 
+
+
+
 body{
     margin: 0;
     padding: 0;
     background-color: $calypso-50;
-    
 }
 
 .contenedorInicio{
-    perspective: 1000px;
+    // perspective: 1000px;
     .imagenFondo{
         background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url('src/assets/fondoInicio.jpg');
         // width: 100%;
         min-height: 80vh;
         min-width: 90vh;
-        
         padding: 10px 10px 10px 10px;
         background-size: cover;
         background-repeat:no-repeat;
         background-position: center;
         ////background-size: contain;
-
         //filter: brightness(0.55); 
     }
 
@@ -67,6 +67,78 @@ body{
         display: flex;
         justify-content: center;
         text-align: center;
+        height: 650px;
+        align-items: center;
+        padding-left: 80px;
+        padding-right: 80px;
     }
 
+
+    .seccionCategoria{
+        display: flex;
+        width: 100%;
+        .contenedorCategorias{
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+
+            padding: 30px 100px; 
+
+            .cardCategorias{
+                width: 500px;
+                height: 300px;
+                position: relative;
+                flex: 0 0 309px;
+                // height: 450px;
+                overflow: hidden;
+                margin-left: 1.5rem;
+                border-radius: 18px;
+                box-shadow: 2px 4px 12px
+                            rgba(0,0,0, 0.08);
+            }
+
+            .divCategoria{
+                min-width: 90vh;
+            }
+
+            // .cardNovedades{
+            //     position: relative;
+            //     flex: 0 0 309px;
+            //     height: 450px;
+            //     overflow: hidden;
+            //     margin-left: 1.5rem;
+            //     border-radius: 18px;
+            //     box-shadow: 2px 4px 12px
+            //                 rgba(0,0,0, 0.08);
+
+            //     .imgNovedades{
+            //         width: 100%;
+
+            //     }
+
+            //     .bodyConetenedorNovedad{
+            //         position: absolute;
+            //         top: 0;
+            //         padding: 28px;
+            //         font-family: "San Francisco";
+            //         font-weight: 600;
+
+            //         .tituloNovedades{
+            //             font-size: 0.75rem;
+            //             margin-bottom: 1rem;
+            //         }
+
+            //         .linkNovedades{
+            //             font-size: 1.3rem;
+            //         }
+
+            //         .textNovedades{
+            //             font-size: 1.1rem;
+            //             font-weight: 300;
+            //         }
+
+            //     }
+            // }
+        }
+    }
 }
