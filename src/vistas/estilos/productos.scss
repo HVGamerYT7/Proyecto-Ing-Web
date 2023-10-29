@@ -1,0 +1,23 @@
+@import 'paletaColores';
+
+.contenedorProductos{
+    min-height: 100vh;
+    // display: flex;
+    // align-items: center;
+    .sessionProducto{
+        display: flex;
+        align-items: center;
+        min-height: 100vh;
+        .contenedorProducto{
+            // max-width: 50vw;
+
+            width: 40vw;
+            min-height: 90vh;
+            background-color: $calypso-100;
+            border-radius: 18px;
+            margin: 10px;
+            box-shadow: 2px 4px 12px
+                                rgba(61, 58, 58, 0.24);
+        }
+    }
+}

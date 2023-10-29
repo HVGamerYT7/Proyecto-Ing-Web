@@ -1,72 +1,72 @@
 [
     {
       "id": "1",
-      "nombre": "Producto 1",
-      "url": "https://example.com/imagen1.jpg",
+      "nombre": "Bolsa de genero",
+      "url": "src/Img de productos/Bolsa de genero.jpg",
       "valoración": "4.5",
       "categoria": "Categoría 1",
       "precio": "10.99"
     },
     {
       "id": "2",
-      "nombre": "Producto 2",
-      "url": "https://example.com/imagen2.jpg",
+      "nombre": "Bolsas de papel",
+      "url": "src/Img de productos/bolsas de papel.jpg",
       "valoración": "3.2",
       "categoria": "Categoría 2",
       "precio": "5.99"
     },
     {
       "id": "3",
-      "nombre": "Producto 3",
-      "url": "https://example.com/imagen3.jpg",
+      "nombre": "Bombillas de papel",
+      "url": "src/Img de productos/Bombillas de papel.jpg",
       "valoración": "2.8",
       "categoria": "Categoría 1",
       "precio": "8.99"
     },
     {
       "id": "4",
-      "nombre": "Producto 4",
-      "url": "https://example.com/imagen4.jpg",
+      "nombre": "Bowl de papel",
+      "url": "src/Img de productos/bowl de papel.jpg",
       "valoración": "4.1",
       "categoria": "Categoría 3",
       "precio": "12.99"
     },
     {
       "id": "5",
-      "nombre": "Producto 5",
-      "url": "https://example.com/imagen5.jpg",
+      "nombre": "Caja de carton",
+      "url": "src/Img de productos/Caja de carton.jpeg",
       "valoración": "5",
       "categoria": "Categoría 2",
       "precio": "6.99"
     },
     {
       "id": "6",
-      "nombre": "Producto 6",
-      "url": "https://example.com/imagen6.jpg",
+      "nombre": "Cepillo de dientes ecologico",
+      "url": "src/Img de productos/cepillo de dientes ecologicos.jpg",
       "valoración": "3.9",
       "categoria": "Categoría 1",
       "precio": "9.99"
     },
     {
       "id": "7",
-      "nombre": "Producto 7",
-      "url": "https://example.com/imagen7.jpg",
+      "nombre": "Lavaloza Ecologico",
+      "url": "src/Img de productos/Lavaloza ecologico.jpg",
       "valoración": "4.7",
       "categoria": "Categoría 3",
       "precio": "14.99"
     },
     {
       "id": "8",
-      "nombre": "Producto 8",
-      "url": "https://example.com/imagen8.jpg",
+      "nombre": "Luffa esponja",
+      "url": "src/Img de productos/luffa esponja.jpg",
       "valoración": "2.5",
       "categoria": "Categoría 2",
       "precio": "7.99"
     },
     {
       "id": "9",
-      "nombre": "Producto 9",
-      "url": "https://example.com/imagen9.jpg",
+      "nombre": "Vaso de papel",
+      "url": "src/Img de productos/vaso de papel.jpg",
       "valoración": "4.3",
       "categoria": "Categoría 1",
       "precio": "11.99"

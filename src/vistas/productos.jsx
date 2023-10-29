@@ -1,6 +1,7 @@
-import './estilos/inicioPrueba.scss';
+import './estilos/productos.scss';
 import productosData from '/src/data/productos.json';
 import React, { useState, useEffect } from 'react';
+
 
 function Productos() {
 
@@ -9,7 +10,7 @@ function Productos() {
         var urlParams = new URLSearchParams(window.location.search);
         var id = urlParams.get('id');
         setProductoSeleccionado(productosData.find((producto) => producto.id === id));
-        console.log(id);
+        console.log();
     }, []);
     
 
@@ -23,11 +24,23 @@ function Productos() {
     }
 
     return ( <>
-    
-        <main>
+        <div className='contenedorProductos'>
+            <section className='sessionProducto'>
+                <article className='contenedorProducto'>
+                    <img></img>
+
+                </article>
+
+            </section>
+            <section className='sessionComentarios'>
+
+            </section>
+        </div>
+
+        {/* <main>
             <div class="contenedor" id="producto">
                 <div id="contenedor-producto">
-                    <img src="./img/bano-de-bosque-epu.webp" 
+                    <img src={productoSeleccionado.url}
                     alt="imagenProducto"/>
                     <div>
                         <button id="boton-compra">Comprar</button>
@@ -107,7 +120,7 @@ function Productos() {
                 <h5>Fecha</h5>
                 <p>Nunc vel lacus maximus, dapibus risus sit amet, viverra ipsum. Maecenas sit amet est a turpis pretium porta. Donec laoreet euismod eros, non rutrum sem. Vivamus dapibus justo quis maximus viverra. Donec mollis nibh eget ante sollicitudin porta. In posuere eget tortor a semper. Proin nec hendrerit magna, sed commodo massa.</p>
             </div>
-        </main>
+        </main> */}
     </> );
 }
 

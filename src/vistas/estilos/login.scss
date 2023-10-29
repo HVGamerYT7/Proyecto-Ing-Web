@@ -17,13 +17,26 @@ body{
     min-height: 100vh;
     background-color: $calypso-100;
     display: flex;
+
     justify-content: center;
     align-items: center;
+
+    .tituloLogin{
+        text-align: center;
+    }
 
     .cardLogin{
 
         width: 240px;
         height: 330px;
+        padding: 10px;
+
+        // display: flex;
+
+        .formularioLogin{
+            display: flex;
+            flex-direction: column;
+        }
 
         background-color: $calypso-50;
         border-radius: 18px;

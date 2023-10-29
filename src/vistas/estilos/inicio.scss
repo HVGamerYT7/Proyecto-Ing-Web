@@ -1,13 +1,10 @@
 @import 'paletaColores';
 
-
-
-
-// body{
-//     margin: 0;
-//     padding: 0;
-//     background-color: $calypso-50;
-// }
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $calypso-50;
+}
 
 .contenedorInicio{
     // perspective: 1000px;
@@ -15,7 +12,7 @@
         background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)), url('src/assets/fondoInicio.jpg');
         // width: 100%;
         min-height: 80vh;
-        min-width: 90vh;
+        min-width: 90vw;
         padding: 10px 10px 10px 10px;
         background-size: cover;
         background-repeat:no-repeat;
@@ -74,15 +71,28 @@
     }
 
 
+
     .seccionCategoria{
         display: flex;
         width: 100%;
+        overflow: hidden; //algo que sobra
+        // margin: 50px;
+        align-items: center;
+        padding: 10px;
+
+        
+
         .contenedorCategorias{
             display: flex;
             overflow-x: auto;
             scrollbar-width: none;
-
-            padding: 30px 100px; 
+           
+            @media screen and (min-width: 1462px) {
+                // Estilos para pantallas más pequeñas que el tamaño de una tablet
+                justify-content: center;
+            }
+            //justify-content: center;
+            padding: 30px 0px; //Ariba-Abajo
 
             .cardCategorias{
                 width: 500px;
@@ -139,6 +149,46 @@
 
             //     }
             // }
+        }
+    }
+
+    .seccionProductos{
+        .listaProductos{
+            width: 100%;
+            min-height: 100vh;
+            background-color: $calypso-200;
+            
+            .listadoProductos{
+
+                    
+                .contenedorProducto{
+                    width: 280px;
+                    height: 370px;
+                    
+                    display: flex;
+                    filter: drop-shadow(0 0 0.4rem $calypso-500);
+
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border-radius: 18px;
+                    
+                    // flex-wrap: wrap;
+                    background-color: $calypso-50;
+                    .imagenProductoContenedor{
+                        width: 200px;
+                        height: auto;
+                        
+                    }
+
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
         }
     }
 }
