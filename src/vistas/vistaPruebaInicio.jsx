@@ -11,15 +11,22 @@ function InicioPrueba() {
         setProductos(productosData);
     }, []);
 
+    const redirigir = (id) => {
+        window.location.href = `http://localhost:5173/productos?id=${id}`;
+    };
+    
     return (
         <div className="listaProductos">
             <ul>
-            {productos.map((producto) => (
-                <ContenedorProducto nombre={producto.nombre} url={producto.url} precio={producto.precio}></ContenedorProducto>
-            ))}
+                {productos.map((producto) => (
+                    <li key={producto.id} className="producto" onClick={() => redirigir(producto.id)}>
+                        <ContenedorProducto nombre={producto.nombre} url={producto.url} precio={producto.precio}></ContenedorProducto>
+                    </li>
+                ))}
             </ul>
         </div>
     );
 }
 
 export default InicioPrueba;
+

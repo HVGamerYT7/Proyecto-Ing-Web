@@ -1,4 +1,18 @@
-function Productos({idProducto}) {
+import './estilos/inicioPrueba.scss';
+import productosData from '/src/data/productos.json';
+import React, { useState, useEffect } from 'react';
+
+function Productos() {
+
+    const [productoSeleccionado,setProductoSeleccionado] = useState({});
+    useEffect(() => {
+        var urlParams = new URLSearchParams(window.location.search);
+        var id = urlParams.get('id');
+        setProductoSeleccionado(productosData.find((producto) => producto.id === id));
+        console.log(id);
+    }, []);
+    
+
 
     const agregarListasDeseados = ()=>{
 
@@ -47,8 +61,8 @@ function Productos({idProducto}) {
                         </span>
                     </li>
                 </ul>
-                <h3>Nombre producto</h3>
-                <h3>Precio</h3>
+                <h3>Nombre={productoSeleccionado.nombre}</h3>
+                <h3>Precio={productoSeleccionado.precio}</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat enim vitae pharetra finibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum luctus et lorem eu congue. Donec euismod elementum leo et aliquam. Etiam ut venenatis purus. Vestibulum porttitor vehicula nisi, finibus consequat nisl volutpat sed. Nulla vitae eleifend massa, vel imperdiet risus. Aliquam faucibus quam eu nisl ullamcorper, id finibus risus egestas. Ut ante ipsum, efficitur et quam eu, lobortis consequat nisi. Etiam id massa magna. Fusce mattis, dui eu pharetra condimentum, urna tortor ornare erat, sit amet pharetra sem ante vitae felis.
                 </p>
