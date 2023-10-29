@@ -2,7 +2,8 @@ import './estilos/login.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import { Link } from 'react-router-dom'
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
+import usuarios from '/src/data/usuarios.json';
 
 export const InicioSesion = () =>{
     const [email, setEmail] = useState('');
@@ -41,9 +42,17 @@ export const InicioSesion = () =>{
             errores = true;
         }
 
-        //if(!errores){}
-    }
-
+        if (!errores) {
+            const usuario = usuarios.find((u) => u.correo === email && u.contrasenia === contrasenia);
+      
+            if (usuario) {
+                //Path Inicio
+            } else {
+              setErrorEmail('Usuario o contraseña incorrectos');
+              setErrorContrasenia('');
+            }
+          }
+    };
 
     return (
         <div className="login">
