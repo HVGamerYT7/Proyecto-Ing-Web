@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "nombreUsuario": "usuario1",
+      "correo": "usuario1@example.com",
+      "contrasenia": "contrasenia1"
+    },
+    {
+      "id": 2,
+      "nombreUsuario": "usuario2",
+      "correo": "usuario2@example.com",
+      "contrasenia": "contrasenia2"
+    },
+    {
+      "id": 3,
+      "nombreUsuario": "usuario3",
+      "correo": "usuario3@example.com",
+      "contrasenia": "contrasenia3"
+    },
+    {
+      "id": 4,
+      "nombreUsuario": "usuario4",
+      "correo": "usuario4@example.com",
+      "contrasenia": "contrasenia4"
+    },
+    {
+      "id": 5,
+      "nombreUsuario": "usuario5",
+      "correo": "usuario5@example.com",
+      "contrasenia": "contrasenia5"
+    },
+    {
+      "id": 6,
+      "nombreUsuario": "usuario6",
+      "correo": "usuario6@example.com",
+      "contrasenia": "contrasenia6"
+    },
+    {
+      "id": 7,
+      "nombreUsuario": "usuario7",
+      "correo": "usuario7@example.com",
+      "contrasenia": "contrasenia7"
+    },
+    {
+      "id": 8,
+      "nombreUsuario": "usuario8",
+      "correo": "usuario8@example.com",
+      "contrasenia": "contrasenia8"
+    },
+    {
+      "id": 9,
+      "nombreUsuario": "usuario9",
+      "correo": "usuario9@example.com",
+      "contrasenia": "contrasenia9"
+    },
+    {
+      "id": 10,
+      "nombreUsuario": "usuario10",
+      "correo": "usuario10@example.com",
+      "contrasenia": "contrasenia10"
+    }
+  ]
