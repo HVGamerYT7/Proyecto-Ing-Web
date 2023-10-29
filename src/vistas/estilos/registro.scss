@@ -1,0 +1,36 @@
+@import 'paletaColores';
+
+.registro{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $calypso-100;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .tituloRegistro{
+        text-align: center;
+    }
+
+    .cardRegistro{
+        width: 400px;
+        height: 700px;
+        padding: 10px;
+
+        // display: flex;
+
+        .formularioRegistro{
+            display: flex;
+            flex-direction: column;
+        }
+
+        background-color: $calypso-50;
+        border-radius: 18px;
+        box-shadow: 2px 4px 12px
+                            rgba(0,0,0, 0.2);
+
+        
+    }
+    
+}

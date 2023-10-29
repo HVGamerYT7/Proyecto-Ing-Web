@@ -1,0 +1,8 @@
+[
+    {
+        "id": 1,
+        "pregunta":"¿Quien se tira a la mamá del Gadi?",
+        "respuesta_correcta" : 0,
+        "respuestas":["Hector","carlos","Parche","Jona"]
+    }
+]
