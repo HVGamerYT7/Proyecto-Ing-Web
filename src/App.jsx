@@ -13,6 +13,7 @@ import ListaDeseados from './vistas/listaDeseados'
 import InicioPrueba from './vistas/vistaPruebaInicio'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Juego from './vistas/juego'
+import Categorias from './vistas/categorias'
 
 
 function App() {
@@ -23,8 +24,8 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Inicio></Inicio>}></Route>
-            <Route path='inicioPrueba' element={<InicioPrueba></InicioPrueba>}></Route>
             <Route path='productos' element={<Productos></Productos>}></Route>
+            <Route path='categorias' element={<Categorias></Categorias>}></Route>
             <Route path='carrito' element={<CarritoCompra></CarritoCompra>}></Route>
             <Route path='pago' element={<Pago></Pago>}></Route>
             <Route path='verificarPago' element={<VerificarPago></VerificarPago>}></Route>

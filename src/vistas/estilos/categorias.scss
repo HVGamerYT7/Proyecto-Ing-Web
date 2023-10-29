@@ -1,0 +1,42 @@
+@import 'paletaColores';
+
+.seccionProductos{
+    .listaProductos{
+        width: 100%;
+        min-height: 100vh;
+        background-color: $calypso-200;
+        
+        .listadoProductos{
+
+                
+            .contenedorProducto{
+                width: 280px;
+                height: 370px;
+                
+                display: flex;
+                filter: drop-shadow(0 0 0.4rem $calypso-500);
+
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 18px;
+                cursor: pointer;
+                
+                // flex-wrap: wrap;
+                background-color: $calypso-50;
+                .imagenProductoContenedor{
+                    width: 200px;
+                    height: auto;
+                    
+                }
+
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+}
