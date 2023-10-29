@@ -10,7 +10,7 @@ import CargarDatos from './vistas/cargarDatos'
 import Perfil from './vistas/perfil'
 import Registrarse from './vistas/registrarse'
 import ListaDeseados from './vistas/listaDeseados'
-import InicioPrueba from './vistas/vistaPruebaInicio'
+import Categorias from './vistas/categorias'
 
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Inicio></Inicio>}></Route>
-            <Route path='inicioPrueba' element={<InicioPrueba></InicioPrueba>}></Route>
             <Route path='productos' element={<Productos></Productos>}></Route>
+            <Route path='categorias' element={<Categorias></Categorias>}></Route>
             <Route path='carrito' element={<CarritoCompra></CarritoCompra>}></Route>
             <Route path='pago' element={<Pago></Pago>}></Route>
             <Route path='verificarPago' element={<VerificarPago></VerificarPago>}></Route>

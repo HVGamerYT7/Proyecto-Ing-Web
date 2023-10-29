@@ -18,6 +18,46 @@
             margin: 10px;
             box-shadow: 2px 4px 12px
                                 rgba(61, 58, 58, 0.24);
+            .rowProducto{
+                display: flex;
+                align-items: center;
+                .columnProducto{
+                    margin: 30px;
+                }
+                .imgProducto{
+                    width: 280px;
+                    // object-fit: cover;
+                    border-radius: 100px;
+                    filter: drop-shadow(0 0 1em $calypso-200);
+
+                    margin-left: 50px;
+                    margin-top: 20px;
+                }
+            }
+
+            .contenedorBotonesProducto{
+                display: flex;
+                // margin: 10px;
+                margin-top: 20px;
+                margin-left: 70px;
+                // justify-content: center;
+                gap: 10px;
+            }
+
+            .descripcionProducto{
+                // width: 100px;
+                margin: 10px 25px;
+                min-height: 40vh;
+                // height: ;
+                border: 2px dashed $calypso-500;
+                color: $color-letra;
+
+                padding: 10px;
+
+                // border-bottom-style: dashed; /* Estilo del borde inferior */
+                // border-bottom-color: red; /* Color del borde inferior */
+                // border-bottom-width: 2px; /* Ancho del borde inferior */
+            }
         }
     }
 }

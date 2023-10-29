@@ -1,11 +1,11 @@
+import { Button } from 'reactstrap';
 import './estilos/productos.scss';
 import productosData from '/src/data/productos.json';
 import React, { useState, useEffect } from 'react';
 
-
 function Productos() {
 
-    const [productoSeleccionado,setProductoSeleccionado] = useState({});
+    const [productoSeleccionado,setProductoSeleccionado] = useState([]);
     useEffect(() => {
         var urlParams = new URLSearchParams(window.location.search);
         var id = urlParams.get('id');
@@ -27,8 +27,28 @@ function Productos() {
         <div className='contenedorProductos'>
             <section className='sessionProducto'>
                 <article className='contenedorProducto'>
-                    <img></img>
+                    <div className='rowProducto'>
+                        <img className='imgProducto' src={productoSeleccionado.url} alt={productoSeleccionado.nombre}></img>
+                        
+                        <div className='columnProducto'>
+                            <h3>{productoSeleccionado.nombre}</h3>
+                            <h3>{productoSeleccionado.precio}</h3>
 
+                        </div>
+
+                        
+                    </div>
+                    <div className='contenedorBotonesProducto'>
+                        <Button color="primary">Comprar</Button>
+                        <Button color="primary">Lista de Deseados</Button>
+                    </div>
+
+                    <div className='descripcionProducto'>
+                        <p>
+                            {productoSeleccionado.descripcion}
+                        </p>
+
+                    </div>
                 </article>
 
             </section>

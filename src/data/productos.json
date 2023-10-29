@@ -4,56 +4,63 @@
       "nombre": "Bolsa de genero",
       "url": "src/Img de productos/Bolsa de genero.jpg",
       "valoración": "4.5",
-      "categoria": "Categoría 1",
-      "precio": "10.99"
+      "categoria": "Otros",
+      "precio": "10.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "2",
       "nombre": "Bolsas de papel",
       "url": "src/Img de productos/bolsas de papel.jpg",
       "valoración": "3.2",
-      "categoria": "Categoría 2",
-      "precio": "5.99"
+      "categoria": "Otros",
+      "precio": "5.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "3",
       "nombre": "Bombillas de papel",
       "url": "src/Img de productos/Bombillas de papel.jpg",
       "valoración": "2.8",
-      "categoria": "Categoría 1",
-      "precio": "8.99"
+      "categoria": "Otros",
+      "precio": "8.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "4",
       "nombre": "Bowl de papel",
       "url": "src/Img de productos/bowl de papel.jpg",
       "valoración": "4.1",
-      "categoria": "Categoría 3",
-      "precio": "12.99"
+      "categoria": "Utencilios",
+      "precio": "12.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "5",
       "nombre": "Caja de carton",
       "url": "src/Img de productos/Caja de carton.jpeg",
       "valoración": "5",
-      "categoria": "Categoría 2",
-      "precio": "6.99"
+      "categoria": "Material",
+      "precio": "6.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "6",
       "nombre": "Cepillo de dientes ecologico",
       "url": "src/Img de productos/cepillo de dientes ecologicos.jpg",
       "valoración": "3.9",
-      "categoria": "Categoría 1",
-      "precio": "9.99"
+      "categoria": "Utencilios",
+      "precio": "9.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "7",
       "nombre": "Lavaloza Ecologico",
       "url": "src/Img de productos/Lavaloza ecologico.jpg",
       "valoración": "4.7",
-      "categoria": "Categoría 3",
-      "precio": "14.99"
+      "categoria": "Otros",
+      "precio": "14.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "8",
@@ -61,7 +68,8 @@
       "url": "src/Img de productos/luffa esponja.jpg",
       "valoración": "2.5",
       "categoria": "Categoría 2",
-      "precio": "7.99"
+      "precio": "7.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "9",
@@ -69,14 +77,16 @@
       "url": "src/Img de productos/vaso de papel.jpg",
       "valoración": "4.3",
       "categoria": "Categoría 1",
-      "precio": "11.99"
+      "precio": "11.99",
+      "descripcion": "Esto es un producto"
     },
     {
       "id": "10",
-      "nombre": "Producto 10",
-      "url": "https://example.com/imagen10.jpg",
+      "nombre": "Polera Reciclada",
+      "url": "src/Img de productos/poleraReciclada.png",
       "valoración": "3.7",
-      "categoria": "Categoría 3",
-      "precio": "13.99"
+      "categoria": "Vestimenta",
+      "precio": "13.99",
+      "descripcion": "Esto es un producto"
     }
   ]
