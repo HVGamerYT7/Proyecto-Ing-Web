@@ -72,7 +72,7 @@ export const InicioSesion = () =>{
                         Iniciar
                     </Button>
 
-                    <Link style={{textAlign: 'center', margin:'10px'}}>Registrarse</Link>
+                    <Link style={{textAlign: 'center', margin:'10px'}}>Iniciar</Link>
 
                 </Form>
                 
