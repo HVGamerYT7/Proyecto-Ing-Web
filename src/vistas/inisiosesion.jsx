@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import { Link,useNavigate } from 'react-router-dom'
 import React, {useState , useEffect} from 'react';
-//import usuarios from '/src/data/usuarios.json';
+import usuarios from '/src/data/usuarios.json';
 //import { useNavigate } from 'react-router-dom';
 
 export const InicioSesion = () =>{
@@ -46,7 +46,7 @@ export const InicioSesion = () =>{
         }
 
         if (!errores) {
-            /*const usuario = usuarios.find((u) => u.correo === email && u.contrasenia === contrasenia);
+            const usuario = usuarios.find((u) => u.correo === email && u.contrasenia === contrasenia);
       
             if (usuario) {
                 //Path Inicio
@@ -59,7 +59,7 @@ export const InicioSesion = () =>{
             } else {
               setErrorEmail('Usuario o contraseña incorrectos');
               setErrorContrasenia('');
-            }*/
+            }
             //de esta manera accedes a rutas restringidas
             navigate('/carrito', {
                 replace: true,
