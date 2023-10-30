@@ -1,62 +1,92 @@
 [
-    {
-      "id": 1,
-      "nombreUsuario": "usuario1",
-      "correo": "usuario1@example.com",
-      "contrasenia": "contrasenia1"
-    },
-    {
-      "id": 2,
-      "nombreUsuario": "usuario2",
-      "correo": "usuario2@example.com",
-      "contrasenia": "contrasenia2"
-    },
-    {
-      "id": 3,
-      "nombreUsuario": "usuario3",
-      "correo": "usuario3@example.com",
-      "contrasenia": "contrasenia3"
-    },
-    {
-      "id": 4,
-      "nombreUsuario": "usuario4",
-      "correo": "usuario4@example.com",
-      "contrasenia": "contrasenia4"
-    },
-    {
-      "id": 5,
-      "nombreUsuario": "usuario5",
-      "correo": "usuario5@example.com",
-      "contrasenia": "contrasenia5"
-    },
-    {
-      "id": 6,
-      "nombreUsuario": "usuario6",
-      "correo": "usuario6@example.com",
-      "contrasenia": "contrasenia6"
-    },
-    {
-      "id": 7,
-      "nombreUsuario": "usuario7",
-      "correo": "usuario7@example.com",
-      "contrasenia": "contrasenia7"
-    },
-    {
-      "id": 8,
-      "nombreUsuario": "usuario8",
-      "correo": "usuario8@example.com",
-      "contrasenia": "contrasenia8"
-    },
-    {
-      "id": 9,
-      "nombreUsuario": "usuario9",
-      "correo": "usuario9@example.com",
-      "contrasenia": "contrasenia9"
-    },
-    {
-      "id": 10,
-      "nombreUsuario": "usuario10",
-      "correo": "usuario10@example.com",
-      "contrasenia": "contrasenia10"
-    }
-  ]
+  {
+    "id": 1,
+    "nombreUsuario": "usuario1",
+    "correo": "usuario1@example.com",
+    "contrasenia": "contrasenia1",
+    "rut": "11111111-1",
+    "comuna": "Comuna 1",
+    "region": "Región 1"
+  },
+  {
+    "id": 2,
+    "nombreUsuario": "usuario2",
+    "correo": "usuario2@example.com",
+    "contrasenia": "contrasenia2",
+    "rut": "22222222-2",
+    "comuna": "Comuna 2",
+    "region": "Región 2"
+  },
+  {
+    "id": 3,
+    "nombreUsuario": "usuario3",
+    "correo": "usuario3@example.com",
+    "contrasenia": "contrasenia3",
+    "rut": "33333333-3",
+    "comuna": "Comuna 3",
+    "region": "Región 3"
+  },
+  {
+    "id": 4,
+    "nombreUsuario": "usuario4",
+    "correo": "usuario4@example.com",
+    "contrasenia": "contrasenia4",
+    "rut": "44444444-4",
+    "comuna": "Comuna 4",
+    "region": "Región 4"
+  },
+  {
+    "id": 5,
+    "nombreUsuario": "usuario5",
+    "correo": "usuario5@example.com",
+    "contrasenia": "contrasenia5",
+    "rut": "55555555-5",
+    "comuna": "Comuna 5",
+    "region": "Región 5"
+  },
+  {
+    "id": 6,
+    "nombreUsuario": "usuario6",
+    "correo": "usuario6@example.com",
+    "contrasenia": "contrasenia6",
+    "rut": "66666666-6",
+    "comuna": "Comuna 6",
+    "region": "Región 6"
+  },
+  {
+    "id": 7,
+    "nombreUsuario": "usuario7",
+    "correo": "usuario7@example.com",
+    "contrasenia": "contrasenia7",
+    "rut": "77777777-7",
+    "comuna": "Comuna 7",
+    "region": "Región 7"
+  },
+  {
+    "id": 8,
+    "nombreUsuario": "usuario8",
+    "correo": "usuario8@example.com",
+    "contrasenia": "contrasenia8",
+    "rut": "88888888-8",
+    "comuna": "Comuna 8",
+    "region": "Región 8"
+  },
+  {
+    "id": 9,
+    "nombreUsuario": "usuario9",
+    "correo": "usuario9@example.com",
+    "contrasenia": "contrasenia9",
+    "rut": "99999999-9",
+    "comuna": "Comuna 9",
+    "region": "Región 9"
+  },
+  {
+    "id": 10,
+    "nombreUsuario": "usuario10",
+    "correo": "usuario10@example.com",
+    "contrasenia": "contrasenia10",
+    "rut": "10101010-0",
+    "comuna": "Comuna 10",
+    "region": "Región 10"
+  }
+]
