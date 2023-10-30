@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ContenedorProducto from './InicioPrueba/contenedorProducto';
 import './estilos/inicio.scss';
 import productosData from '/src/data/productos.json';
@@ -30,9 +31,9 @@ function Inicio() {
                     <header>
                         <img src='src/assets/iconoReciclaje.png' alt='iconoInicio'></img>
                         <nav>
-                            <button className='botonNav'>Inicio</button>
-                            <button className='botonNav'>lista de deseados</button>
-                            <button className='botonNav'>Carrito</button>
+                            <Link to='/' className='botonNav'>Inicio</Link>
+                            <Link to='/listaDeseados' className='botonNav'>lista de deseados</Link>
+                            <Link to='/carrito' className='botonNav'>Carrito</Link>
                         </nav>
 
                     </header>

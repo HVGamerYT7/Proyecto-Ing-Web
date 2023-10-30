@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 import trivias from '../data/preguntas.json';
+//Dame un codigo que sume 
+
 
 function Juego() {
   const [show, setShow] = useState(false);
@@ -18,6 +20,12 @@ function Juego() {
     selectRandomTrivia();
     setShow(true);
   };
+
+  
+
+  
+
+
 
   const selectRandomTrivia = () => {
     const randomIndex = Math.floor(Math.random() * trivias.length);

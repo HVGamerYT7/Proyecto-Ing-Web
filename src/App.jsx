@@ -28,7 +28,7 @@ function App() {
             <Route index element={<Inicio></Inicio>}></Route>
               <Route path='productos' element={<Productos></Productos>}></Route>
               <Route path='categorias' element={<Categorias></Categorias>}></Route>
-              <Route path='carrito' element={<PrivateRoute><CarritoCompra></CarritoCompra></PrivateRoute>}></Route>
+              <Route path='carrito' element={<CarritoCompra></CarritoCompra>}></Route>
               <Route path='pago' element={<Pago></Pago>}></Route>
               <Route path='verificarPago' element={<VerificarPago></VerificarPago>}></Route>
               <Route path='cargarDatos' element={<CargarDatos></CargarDatos>}></Route>
