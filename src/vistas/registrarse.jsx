@@ -3,7 +3,7 @@ import './estilos/registro.scss';
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import jsonRegiones from '../data/regiones.json';
-import usuarios from '../data/usuarios.json'
+import usuarios from '../data/usuarios.json';
 
 function Registrarse() {
     const [nombre, setNombre] = useState('');
@@ -22,20 +22,25 @@ function Registrarse() {
     const [errorContrasenia, setErrorContrasenia] = useState('');
     const [errorConfirmacionContrasenia, setErrorConfirmacionContrasenia] = useState('');
 
-    const [regionesYComunas, setRegionesYComunas] = useState(null);
-
-
-    
 
     const BotonRegistrarse = () => {
         let errores = false;
+        const usuarioExistente = usuarios.find(user => user.nombreUsuario === nombre);
+        const correoExistente = usuarios.find(user => user.correo === correo);
+        const rutExistente = usuarios.find(user => user.rut === rut);
 
         if (!nombre) {
             setErrorNombre('Nombre es obligatorio.');
             errores = true;
         } else {
-            setErrorNombre('');
+            if (!/^[a-zA-Z0-9]+$/.test(nombre)) {
+                setErrorNombre('El nombre de usuario solo puede contener letras y números.');
+                errores = true;
+            }else {
+                setErrorNombre('');
+            }
         }
+
 
         if (!correo) {
             setErrorCorreo('Correo es obligatorio.');
@@ -80,22 +85,36 @@ function Registrarse() {
         }
 
         if(!validaRut(rut)){
-            console.log("run invalido");
             setErrorRut('Rut invalido.');
             errores = true;
         }
 
-        if (!/^[a-zA-Z0-9]+$/.test(nombre)) {
-            setErrorNombre('El nombre de usuario solo puede contener letras y números.');
+        if (usuarioExistente) {
+            setErrorNombre('El nombre de usuario ya existe.');
             errores = true;
-        } else {
-            setErrorNombre('');
         }
-    
+
+        if (correoExistente) {
+            setErrorCorreo('El correo electrónico ya está registrado.');
+            errores = true;
+        }
+
+        if (rutExistente) {
+            setErrorRut('El RUT ya está registrado.');
+            errores = true;
+        }
 
         if (!errores) {
-            // Envía el formulario o realiza las acciones necesarias.
-        }
+            const nuevoUsuario = {
+                nombre,                    
+                correo,
+                rut,
+                region,
+                comuna,
+                contrasenia
+            };
+            usuarios.push(nuevoUsuario);
+    }
     }
 
     function validaRut(rut) {
