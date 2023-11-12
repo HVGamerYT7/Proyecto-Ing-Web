@@ -9,8 +9,8 @@ const server = http.createServer(app);
 const io = require('socket.io')(server);
 
 //middlewares
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+//app.use(express.json());
+//app.use(express.urlencoded({extended: false}));
 
 //ruta
 //app.use(require('./src/rutas/index'));

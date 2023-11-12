@@ -44,6 +44,17 @@ export const cambiarNombreUsuario = (id: number, nuevoNombre: string) => {
   });
 };
 
+export const cambiarCorreo = (id: number, nuevoCorreo: string) => {
+  pool.query(`UPDATE usuarios SET correo = '${nuevoCorreo}' WHERE id = ${id}`, (error:any, results:any) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log(`Correo de usuario con id ${id} cambiado exitosamente`);
+    }
+    pool.end();
+  });
+};
+
 
 
 

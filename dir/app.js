@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const usuarios_1 = require("./constroladores/usuarios");
+const usuarios_1 = require("./usuario/usuarios");
 const express = require('express');
 const pool = require('./config'); // Importa la configuración de conexión
 const app = express();
@@ -9,8 +9,8 @@ const http = require('http');
 const server = http.createServer(app);
 const io = require('socket.io')(server);
 //middlewares
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.json());
+//app.use(express.urlencoded({extended: false}));
 //ruta
 //app.use(require('./src/rutas/index'));
 // Habilita el middleware cors para todas las rutas
