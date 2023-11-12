@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon dir/app.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "socket.io": "^4.7.2"
   },
   "devDependencies": {
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.9.0",
+    "nodemon": "^3.0.1"
   }
 }
