@@ -33,7 +33,7 @@ const mostrarProductosLD = async (req:any, res:any) =>
     try
     {
         const {id_usuario} = req.quer;
-        const resul = await pool.query('SELECT * FROM listaDeseados WHERE id_usuario = $1',[id_usuario]); 
+        const resul = await pool.query('SELECT * FROM usuarios inner join listadeseados on usuarios.id = listadeseados.id_usuarios inner join productos on listadeseados.id_producto = productos.id WHERE id_usuario = $1',[id_usuario]); 
         const data = resul.rows;
         resul.json(data)
     }

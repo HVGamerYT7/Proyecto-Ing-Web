@@ -29,7 +29,7 @@ const eliminarCompra = async(req:any , res:any) => {
 const comprasRealizadas = async(req:any , res:any) => {
   try{
     const {id_usuario} = req.quer;
-    const result = await pool.query('SELECT * FROM compras WHERE id_usuario = $1',[id_usuario]);
+    const result = await pool.query('SELECT * FROM usuarios inner join compras on usuarios.id = compras.id_usuario inner join productos on compras.id_producto = productos.id WHERE id_usuario = $1',[id_usuario]);
     res.status(200).json({ message: 'compras realizadas por el usuario', data: result.rows });
   }
   catch(error)
