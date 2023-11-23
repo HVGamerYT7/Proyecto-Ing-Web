@@ -9,13 +9,14 @@ export interface CustomRequest extends Request {
 }
 
 function authGuard(req: Request, res: Response, next: NextFunction): void {
-  if (!req.header('authorization')) {
+  const authHeader = req.header('authorization');
+  if (!authHeader) {
     res.status(401).send({
       message: 'Error: No se ha recibido el token de autenticación',
     });
     return;
   }
-  const token = req.header('authorization').replace('Bearer ', '');
+  const token = authHeader.replace('Bearer ', '');
   try {
     const decoded: { id: string; username: string; rol: string } = jwt.verify(
       token,

@@ -36,7 +36,7 @@ const agregarProductoLD = (req, res) => __awaiter(void 0, void 0, void 0, functi
 const mostrarProductosLD = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { id_usuario } = req.quer;
-        const resul = yield pool.query('SELECT * FROM listaDeseados WHERE id_usuario = $1', [id_usuario]);
+        const resul = yield pool.query('SELECT * FROM usuarios inner join listadeseados on usuarios.id = listadeseados.id_usuarios inner join productos on listadeseados.id_producto = productos.id WHERE id_usuario = $1', [id_usuario]);
         const data = resul.rows;
         resul.json(data);
     }

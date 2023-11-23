@@ -45,7 +45,7 @@ const modificarCantidadProducto = (req, res) => __awaiter(void 0, void 0, void 0
 const mostrarCarrito = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { id_usuario } = req.query;
-        const result = yield pool.query('SELECT * FROM carritocompras WHERE id_usuario = $1', [id_usuario]);
+        const result = yield pool.query('SELECT * FROM usuarios inner join carritocompras on usuarios.id = carritocompras.id_usuario inner join productos on carritocompras.idproducto = productos.id WHERE id_usuario = $1', [id_usuario]);
         res.status(200).json({ message: 'Carrito de compras', data: result.rows });
     }
     catch (error) {

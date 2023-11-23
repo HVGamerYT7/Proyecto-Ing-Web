@@ -1,4 +1,29 @@
 const pool = require('../config')
+import jwt from 'jsonwebtoken';
+const SECRET_KEY = process.env.JWT_SECRET_KEY ?? 'secretkey';
+import bcrypt from 'bcrypt';
+const saltRounds = 10; // Define the saltRounds variable
+
+
+const crearCuenta = async (req: any, res: any) => {
+  const { id, password } = req.query;
+  try {
+    const result = await pool.query('SELECT * FROM usuarios WHERE id = $1', [id]);
+    const usuariosEncontrados = result.rows;
+
+    if (usuariosEncontrados.length > 0) {
+      res.status(400).json({ message: 'Usuario ya está registrado' });
+    } else {
+      const hashedPassword = await bcrypt.hash(password, saltRounds);
+      await pool.query('INSERT INTO usuarios (id, contrasena) VALUES ($1, $2)', [id, hashedPassword]);
+      res.status(200).json({ message: 'Usuario creado con éxito' });
+    }
+  } catch (error) {
+    console.error('Error al realizar la consulta:', error);
+    res.status(500).send('Error interno del servidor');
+  }
+}
+
 
 const obtenerUsuarios = async(req:any,res:any) => {
     try {
@@ -66,10 +91,6 @@ const cambiarCorreo = async (req: any, res: any) => {
   }
 }
 
-//encriptar contraseña
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
-
 const cambiarContrasena = async (req: any, res: any) => 
 {
   try
@@ -87,24 +108,44 @@ const cambiarContrasena = async (req: any, res: any) =>
 }
 
 
-const verificarCredenciales = async (req: any, res: any) =>
-{
-  try
-  {
-    const { correo, contrasenia } = req.body;
-    const hashedPassword = await bcrypt.hash(contrasenia, 10);
-    const result = await pool.query('SELECT * FROM usuarios WHERE correo = $1 AND contrasena = $2', [correo, hashedPassword]);
-    if (result.rows.length === 0) {
-      res.status(401).json({ message: 'Credenciales inválidas' });
-    } else {
-      res.status(200).json({ message: 'Credenciales válidas' });
-    }
+const iniciarSesion = async (req: any, res: any) => {
+  if (!req.body || !req.body.username || !req.body.password) {
+    res.status(400).send({
+      message: 'Error: No se han recibido todos los datos necesarios',
+    });
+    return;
   }
-  catch(error)
-  {
-    console.error('Error al realizar la consulta:', error);
-    res.status(500).send('Error interno del servidor');
+  const { username, password } = req.body;
+  const usuario = await pool.query('SELECT * FROM usuarios WHERE id = $1 AND contrasena = $2', [req.body.id, req.body.contrasenia]);
+  if (!usuario) {
+    res.status(404).send({
+      message: 'El usuario no existe',
+    });
+    return;
   }
+  if (!bcrypt.compareSync(password, usuario.password)) {
+    res.status(401).send({
+      message: 'Contraseña incorrecta',
+    });
+    return;
+  }
+  const token = jwt.sign(
+    { username: usuario.username, rol: usuario.rol },
+    SECRET_KEY,
+    { expiresIn: '24h' },
+  );
+
+  res.status(200).send({
+    message: 'Inicio de sesión correcto',
+    token: {
+      token,
+      expiresOn: new Date(Date.now() + 24 * 60 * 60 * 1000).getTime(),
+    },
+    usuario: {
+      username: usuario.username,
+      rol: usuario.rol,
+    },
+  });
 }
 
 
@@ -116,5 +157,5 @@ module.exports =
   cambiarNombreUsuario,
   cambiarCorreo,
   cambiarContrasena,
-  verificarCredenciales
+  iniciarSesion
 }
