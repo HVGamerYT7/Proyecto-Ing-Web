@@ -28,7 +28,7 @@ const crearCuenta = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         }
         else {
             const hashedPassword = yield bcrypt_1.default.hash(password, saltRounds);
-            yield pool.query('INSERT INTO usuarios (id, contrasena) VALUES ($1, $2)', [id, hashedPassword]);
+            yield pool.query('INSERT INTO usuarios (id, contrasenia) VALUES ($1, $2)', [id, hashedPassword]);
             res.status(200).json({ message: 'Usuario creado con éxito' });
         }
     }
@@ -94,9 +94,10 @@ const cambiarCorreo = (req, res) => __awaiter(void 0, void 0, void 0, function* 
 });
 const cambiarContrasena = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { id, contrasena } = req.query;
+        const { id, contrasena } = req.body;
         const hashedPassword = yield bcrypt_1.default.hash(contrasena, saltRounds);
-        const result = yield pool.query('UPDATE usuarios SET contrasena = $1 WHERE id_usuario = $2', [hashedPassword, id]);
+        console.log(hashedPassword);
+        const result = yield pool.query('UPDATE usuarios SET contrasenia = $1 WHERE id = $2', [hashedPassword, id]);
         res.status(200).json({ message: 'Contraseña actualizada con éxito', data: result.rows });
     }
     catch (error) {
@@ -105,27 +106,28 @@ const cambiarContrasena = (req, res) => __awaiter(void 0, void 0, void 0, functi
     }
 });
 const iniciarSesion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    if (!req.body || !req.body.username || !req.body.password) {
+    if (!req.body || !req.body.id || !req.body.contrasenia) {
         res.status(400).send({
             message: 'Error: No se han recibido todos los datos necesarios',
         });
         return;
     }
-    const { username, password } = req.body;
-    const usuario = yield pool.query('SELECT * FROM usuarios WHERE id = $1 AND contrasena = $2', [req.body.id, req.body.contrasenia]);
-    if (!usuario) {
+    const { id, contrasenia } = req.body;
+    const usuario = yield pool.query('SELECT * FROM usuarios WHERE id = $1', [id]);
+    if (usuario.rows.length === 0) {
         res.status(404).send({
             message: 'El usuario no existe',
         });
         return;
     }
-    if (!bcrypt_1.default.compareSync(password, usuario.password)) {
+    const hashedPassword = usuario.rows[0].contrasenia;
+    if (!bcrypt_1.default.compareSync(contrasenia, hashedPassword)) {
         res.status(401).send({
             message: 'Contraseña incorrecta',
         });
         return;
     }
-    const token = jsonwebtoken_1.default.sign({ username: usuario.username, rol: usuario.rol }, SECRET_KEY, { expiresIn: '24h' });
+    const token = jsonwebtoken_1.default.sign({ username: usuario.rows[0].username }, SECRET_KEY, { expiresIn: '24h' });
     res.status(200).send({
         message: 'Inicio de sesión correcto',
         token: {
@@ -133,8 +135,8 @@ const iniciarSesion = (req, res) => __awaiter(void 0, void 0, void 0, function* 
             expiresOn: new Date(Date.now() + 24 * 60 * 60 * 1000).getTime(),
         },
         usuario: {
-            username: usuario.username,
-            rol: usuario.rol,
+            username: usuario.rows[0].username,
+            rol: usuario.rows[0].rol,
         },
     });
 });
@@ -146,5 +148,6 @@ module.exports =
         cambiarNombreUsuario,
         cambiarCorreo,
         cambiarContrasena,
-        iniciarSesion
+        iniciarSesion,
+        crearCuenta
     };
