@@ -2,14 +2,14 @@ const {Router} = require('express');
 const router = Router();
 
 const {obtenerUsuarios, buscarUsuario,eliminarUsuario,cambiarNombreUsuario,cambiarCorreo,cambiarContrasena,iniciarSesion,crearCuenta} = require('../controllers/usuarios')
-//import middlewares from "../controllers/middlewares";
+import { verifyToken } from '../controllers/middlewares';
 
-router.get('/api/usuarios',obtenerUsuarios);
-router.post('/api/usuarios',buscarUsuario);
-router.delete('/api/usuarios',eliminarUsuario);
-router.post('/api/cambiarNombre',cambiarNombreUsuario);
-router.post('/api/cambiarCorreo',cambiarCorreo);
-router.post('/api/cambiarContrasenia',cambiarContrasena);
+router.get('/api/usuarios',verifyToken,obtenerUsuarios);
+router.post('/api/usuarios',verifyToken,buscarUsuario);
+router.delete('/api/usuarios',verifyToken,eliminarUsuario);
+router.post('/api/cambiarNombre',verifyToken,cambiarNombreUsuario);
+router.post('/api/cambiarCorreo',verifyToken,cambiarCorreo);
+router.post('/api/cambiarContrasenia',verifyToken,cambiarContrasena);
 router.post('/api/login',iniciarSesion);
 router.post('/api/registro',crearCuenta);
 

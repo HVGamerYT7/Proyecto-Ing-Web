@@ -136,7 +136,7 @@ const iniciarSesion = async (req: any, res: any) => {
     SECRET_KEY,
     { expiresIn: '24h' },
   );
-
+  res.cookie('token', token, { httpOnly: true }); // Guarda el token como cookie
   res.status(200).send({
     message: 'Inicio de sesión correcto',
     token: {

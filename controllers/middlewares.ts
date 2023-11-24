@@ -1,36 +1,22 @@
-import { NextFunction, Request, Response } from 'express';
 
-import jwt from 'jsonwebtoken';
+import { Request, Response, NextFunction } from 'express';
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY ?? 'secretkey';
+const express = require('express');
+const cookieParser = require('cookie-parser');
 
-export interface CustomRequest extends Request {
-  token: { id: string; username: string; rol: string };
-}
+const app = express();
 
-function authGuard(req: Request, res: Response, next: NextFunction): void {
-  const authHeader = req.header('authorization');
-  if (!authHeader) {
-    res.status(401).send({
-      message: 'Error: No se ha recibido el token de autenticación',
-    });
-    return;
-  }
-  const token = authHeader.replace('Bearer ', '');
-  try {
-    const decoded: { id: string; username: string; rol: string } = jwt.verify(
-      token,
-      SECRET_KEY,
-    ) as { id: string; username: string; rol: string };
-    (req as CustomRequest).token = decoded;
+app.use(cookieParser());
+
+export const verifyToken = (req: Request, res: Response, next: NextFunction) => {
+  const cookies = req.cookies;
+  const token = cookies ? cookies.token : undefined;
+
+  if (token) {
     next();
-  } catch (error) {
-    res.status(401).send({
-      message: 'Error: Token de autenticación inválido',
-    });
-    return;
+  } else {
+    res.status(401).json({ message: 'El token no existe' });
   }
-}
-export default {
-  authGuard,
 };
+
+app.use(verifyToken);

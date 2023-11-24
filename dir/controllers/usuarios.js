@@ -128,6 +128,7 @@ const iniciarSesion = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         return;
     }
     const token = jsonwebtoken_1.default.sign({ username: usuario.rows[0].username }, SECRET_KEY, { expiresIn: '24h' });
+    res.cookie('token', token, { httpOnly: true }); // Guarda el token como cookie
     res.status(200).send({
         message: 'Inicio de sesión correcto',
         token: {
