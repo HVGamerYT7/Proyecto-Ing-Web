@@ -134,7 +134,7 @@ const iniciarSesion = async (req: any, res: any) => {
   const token = jwt.sign(
     { username: usuario.rows[0].username },
     SECRET_KEY,
-    { expiresIn: '24h' },
+    { expiresIn: '30s' },
   );
   res.cookie('token', token, { httpOnly: true }); // Guarda el token como cookie
   res.status(200).send({

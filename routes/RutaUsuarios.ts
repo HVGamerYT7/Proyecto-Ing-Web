@@ -1,16 +1,40 @@
-const {Router} = require('express');
-const router = Router();
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const { verifyToken } = require('../controllers/middlewares');
+const {
+  obtenerUsuarios,
+  buscarUsuario,
+  eliminarUsuario,
+  cambiarNombreUsuario,
+  cambiarCorreo,
+  cambiarContrasena,
+  iniciarSesion,
+  crearCuenta
+} = require('../controllers/usuarios');
 
-const {obtenerUsuarios, buscarUsuario,eliminarUsuario,cambiarNombreUsuario,cambiarCorreo,cambiarContrasena,iniciarSesion,crearCuenta} = require('../controllers/usuarios')
-import { verifyToken } from '../controllers/middlewares';
+const router = express.Router();
 
-router.get('/api/usuarios',verifyToken,obtenerUsuarios);
-router.post('/api/usuarios',verifyToken,buscarUsuario);
-router.delete('/api/usuarios',verifyToken,eliminarUsuario);
-router.post('/api/cambiarNombre',verifyToken,cambiarNombreUsuario);
-router.post('/api/cambiarCorreo',verifyToken,cambiarCorreo);
-router.post('/api/cambiarContrasenia',verifyToken,cambiarContrasena);
-router.post('/api/login',iniciarSesion);
-router.post('/api/registro',crearCuenta);
+// Aplica middleware para parsear cookies antes de verifyToken
+router.use(cookieParser());
+
+// Aplica middleware verifyToken a todas las rutas excepto iniciarSesion y crearCuenta
+router.use((req:any, res:any, next:any) => {
+  if (req.path === '/api/login' || req.path === '/api/registro') {
+    // Si la ruta es iniciarSesion o crearCuenta, pasa al siguiente middleware sin verificar el token
+    return next();
+  }
+
+  // Para otras rutas, aplica el middleware verifyToken
+  verifyToken(req, res, next);
+});
+
+router.get('/api/usuarios', obtenerUsuarios);
+router.post('/api/usuarios', buscarUsuario);
+router.delete('/api/usuarios', eliminarUsuario);
+router.post('/api/cambiarNombre', cambiarNombreUsuario);
+router.post('/api/cambiarCorreo', cambiarCorreo);
+router.post('/api/cambiarContrasenia', cambiarContrasena);
+router.post('/api/login', iniciarSesion);
+router.post('/api/registro', crearCuenta);
 
 module.exports = router;

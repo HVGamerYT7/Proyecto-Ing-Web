@@ -1,19 +1,26 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.verifyToken = void 0;
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const app = express();
-app.use(cookieParser());
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const SECRET_KEY = (_a = process.env.JWT_SECRET_KEY) !== null && _a !== void 0 ? _a : 'secretkey';
 const verifyToken = (req, res, next) => {
-    const cookies = req.cookies;
-    const token = cookies ? cookies.token : undefined;
-    if (token) {
+    const token = req.cookies['token'];
+    console.log('Token from cookies:', token);
+    if (!token) {
+        return res.status(401).json({ message: "Token not found" });
+    }
+    try {
+        const decoded = jsonwebtoken_1.default.verify(token, SECRET_KEY);
+        req.user = decoded;
         next();
     }
-    else {
-        res.status(401).json({ message: 'El token no existe' });
+    catch (error) {
+        console.error('Error verifying token:', error);
+        return res.status(401).json({ message: "Invalid token" });
     }
 };
 exports.verifyToken = verifyToken;
-app.use(exports.verifyToken);
