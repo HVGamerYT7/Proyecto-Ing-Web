@@ -7,6 +7,7 @@ const port = 3000;
 const http = require('http');
 const server = http.createServer(app);
 const io = require('socket.io')(server);
+// Aplica middleware verifyToken a todas las rutas excepto iniciarSesion y crearCuenta
 //middlewares
 app.use(express.json()); // para que entienda el formato json
 app.use(express.urlencoded({ extended: false })); // para que entienda los datos que vienen de un formulario html 

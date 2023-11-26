@@ -10,11 +10,12 @@ const obtenerProductosPorCategoria = async (req: any,res:any) => {
         res.status(500).send('Error interno del servidor');        
     }
 };
+
 const mostrarProductos = async (req:any,res:any) => {
     try {
         const result = await pool.query('SELECT * FROM productos');
         const data = result.rows;
-        res.json(result);
+        res.json(data);
     } catch (error) {
         console.error('Error al realizar la consulta:', error);
         res.status(500).send('Error interno del servidor');        

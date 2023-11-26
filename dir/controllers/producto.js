@@ -24,7 +24,7 @@ const mostrarProductos = (req, res) => __awaiter(void 0, void 0, void 0, functio
     try {
         const result = yield pool.query('SELECT * FROM productos');
         const data = result.rows;
-        res.json(result);
+        res.json(data);
     }
     catch (error) {
         console.error('Error al realizar la consulta:', error);

@@ -1,3 +1,4 @@
+const {Router} = require('express');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const { verifyToken } = require('../controllers/middlewares');
@@ -16,10 +17,10 @@ const router = express.Router();
 
 // Aplica middleware para parsear cookies antes de verifyToken
 router.use(cookieParser());
-
-// Aplica middleware verifyToken a todas las rutas excepto iniciarSesion y crearCuenta
+//
+//// Aplica middleware verifyToken a todas las rutas excepto iniciarSesion y crearCuenta
 router.use((req:any, res:any, next:any) => {
-  if (req.path === '/api/login' || req.path === '/api/registro') {
+  if (req.path === '/api/login' || req.path === '/api/registro'|| req.path === '/api/productos' || req.path==='api/prodCat' || req.path==='/api/prodBus' || req.path === 'api/prodCat') {
     // Si la ruta es iniciarSesion o crearCuenta, pasa al siguiente middleware sin verificar el token
     return next();
   }
