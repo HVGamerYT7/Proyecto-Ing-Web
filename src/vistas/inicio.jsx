@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import ContenedorProducto from './InicioPrueba/contenedorProducto';
 import './estilos/inicio.scss';
 import productosData from '/src/data/productos.json';
+import axios from 'axios';
 
 
 import React, { useState, useEffect } from 'react';
@@ -12,7 +13,13 @@ function Inicio() {
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        setProductos(productosData);
+        axios.get('http://localhost:3000/api/productos')
+        .then(response => {
+          setProductos(response.data);
+        })
+        .catch(error => {
+          console.error('Error al obtener datos del backend', error);
+        });
     }, []);
 
     const redirigir = (id) => {
