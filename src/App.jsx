@@ -17,26 +17,16 @@ import { PrivateRoute } from './vistas/PrivateRoute';
 import axios from 'axios';
 
 function App() {
-  const [datosDelBackend, setDatosDelBackend] = useState([]);
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:3000/api/ejemplo')
-  //     .then(response => {
-  //       setDatosDelBackend(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error al obtener datos del backend', error);
-  //     });
-  // }, []);
+  
 
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Inicio datosDelBackend={datosDelBackend} />}>
+          <Route path="/" >
             <Route index element={<Inicio></Inicio>}></Route>
-            <Route path='productos' element={<Productos datosDelBackend={datosDelBackend} />}></Route>
-            <Route path='categorias' element={<Categorias datosDelBackend={datosDelBackend} />}></Route>
+            <Route path='productos' element={<Productos/>}></Route>
+            <Route path='categorias' element={<Categorias/>}></Route>
             <Route path='carrito' element={<CarritoCompra></CarritoCompra>}></Route>
             <Route path='pago' element={<Pago></Pago>}></Route>
             <Route path='verificarPago' element={<VerificarPago></VerificarPago>}></Route>
