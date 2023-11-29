@@ -30,7 +30,43 @@ export const InicioSesion = () =>{
         setErrorContrasenia('')
     }
 
-    const handleSubmit = (e) => {
+    const setAuthLocalStorage = (res) => {
+        console.log(
+          '🚀 ~ file: localstorage.ts:13 ~ setAuthLocalStorage ~ res:',
+          res,
+        );
+        localStorage.setItem(
+          'auth',
+          JSON.stringify({
+            token: res.token,
+            usuario: res.usuario,
+          }),
+        );
+      };
+
+    const authUsuario = async (correo, contrasenia) => {
+        try {
+            const response = await fetch('http://localhost:3000/api/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ correo, contrasenia }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok){ 
+                setAuthLocalStorage(data);
+                return true;
+            }
+
+            return false;
+        } catch (error) {
+            console.error(error);
+        }
+        return false;
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         let errores = false;
@@ -46,27 +82,31 @@ export const InicioSesion = () =>{
         }
 
         if (!errores) {
-            const usuario = usuarios.find((u) => u.correo === email && u.contrasenia === contrasenia);
-      
-            if (usuario) {
+            const res = await authUsuario(email, contrasenia);
+            if (res) {
                 //Path Inicio
-                navigate('/carrito', {
-                    replace: true,
-                    state: {
-                        logged: true,
-                    },
-                });
+
+                
+                navigate('/', {replace: true});
+
+
+                // navigate('/carrito', {
+                //     replace: true,
+                //     state: {
+                //         logged: true,
+                //     },
+                // });
             } else {
               setErrorEmail('Usuario o contraseña incorrectos');
               setErrorContrasenia('');
             }
             //de esta manera accedes a rutas restringidas
-            navigate('/carrito', {
-                replace: true,
-                state: {
-                    logged: true,
-                },
-            });
+            // navigate('/carrito', {
+            //     replace: true,
+            //     state: {
+            //         logged: true,
+            //     },
+            // });
           }
     };
 

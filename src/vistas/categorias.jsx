@@ -2,6 +2,7 @@ import productosData from '/src/data/productos.json';
 import React, { useState, useEffect } from 'react';
 import ContenedorProducto from './InicioPrueba/contenedorProducto';
 import './estilos/categorias.scss';
+import Navegador from './navegador';
 
 function Categorias() {
 
@@ -18,9 +19,11 @@ function Categorias() {
     };
 
     return ( <>
+        <Navegador></Navegador>
         <section className='seccionProductos'>
-            <h2>Categorias</h2>
+            
             <div className="listaProductos">
+                <h2 style={{textAlign:'center', margin:'20px'}}>Categorias</h2>
                 <ul className='listadoProductos'>
                     {productos.map((producto) => (
                         <li key={producto.id} className="producto" onClick={() => redirigir(producto.id)}>

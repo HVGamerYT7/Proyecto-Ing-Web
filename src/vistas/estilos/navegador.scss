@@ -1,0 +1,48 @@
+@import 'paletaColores';
+
+header{
+    height: 60px;
+    background-color: $calypso-700;
+    filter: drop-shadow(0 0 2em $calypso-900);
+    
+    nav{
+        align-items: center;
+        width:auto;
+        display: flex;
+        .botonNav{
+            border: none;
+            background: none;
+            text-decoration: none;
+            outline: none;
+            font: inherit;
+            color: inherit;
+            cursor: pointer;
+            margin: 0px;
+            color: $color-letra;
+            font-family: $fuente-preferida;
+            padding-left: 20px;
+            font-weight: bold; 
+            font-size: 20px; /* Cambia el tamaño según tus necesidades (puedes usar px, em, rem, %, etc.) */
+            background-color: rgba(255, 255, 255, 0);
+        }
+        .botonUsuario{
+            width: 60px;
+            height: 60px;
+            padding-left: 20px;
+        }
+
+    }
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px 0px 30px; // arriba derecha abajo izquierda
+    align-items: center;
+    
+    border-radius: 10px;
+
+    header, img{
+        width: 40px;
+        height: 40px;
+    }
+
+    
+}

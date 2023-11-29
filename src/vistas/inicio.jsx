@@ -3,6 +3,8 @@ import ContenedorProducto from './InicioPrueba/contenedorProducto';
 import './estilos/inicio.scss';
 import productosData from '/src/data/productos.json';
 import axios from 'axios';
+import { VscAccount } from "react-icons/vsc";
+import Navegador from './navegador';
 
 
 import React, { useState, useEffect } from 'react';
@@ -11,6 +13,7 @@ import React, { useState, useEffect } from 'react';
 function Inicio() {
     
     const [productos, setProductos] = useState([]);
+    const [logiado, setLogiado] = useState(()=>{return <></>});
 
     useEffect(() => {
         axios.get('http://localhost:3000/api/productos')
@@ -35,22 +38,13 @@ function Inicio() {
             <article>
                 <div className="imagenFondo">
                     <div className='filtro'></div>
-                    <header>
-                        <img src='src/assets/iconoReciclaje.png' alt='iconoInicio'></img>
-                        <nav>
-                            <Link to='/' className='botonNav'>Inicio</Link>
-                            <Link to='/listaDeseados' className='botonNav'>lista de deseados</Link>
-                            <Link to='/carrito' className='botonNav'>Carrito</Link>
-                        </nav>
-
-                    </header>
+                    <Navegador></Navegador>
 
                     <section className='titulo'>
                         <h3>Cuidar de la Tierra, cuidar de ti: Productos reciclados para un futuro mejor.</h3>
                     </section>
                 </div>
-            </article>
-            
+            </article> 
             <section className='seccionCategoria'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="200px" height="200" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
