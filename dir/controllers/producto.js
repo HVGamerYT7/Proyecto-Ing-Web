@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const pool = require('../config');
 const obtenerProductosPorCategoria = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { categoria } = req.query;
+        const { categoria } = req.body;
         const result = yield pool.query('SELECT * FROM productos WHERE categoria = $1', [categoria]);
         res.status(200).json({ message: 'Productos por Categoria', data: result.rows });
     }
@@ -33,7 +33,7 @@ const mostrarProductos = (req, res) => __awaiter(void 0, void 0, void 0, functio
 });
 const buscarProducto = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { nombre } = req.quer;
+        const { nombre } = req.query;
         const result = yield pool.query('SELECT * FROM productos WHERE nombre = $1', [nombre]);
         res.status(200).json({ message: 'Producto Econtrado con éxito', data: result.rows });
     }
@@ -44,7 +44,7 @@ const buscarProducto = (req, res) => __awaiter(void 0, void 0, void 0, function*
 });
 const eliminarProducto = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { id } = req.quer;
+        const { id } = req.query;
         const result = yield pool.query('DELETE FROM productos WHERE id = $1', [id]);
         res.status(200).json({ message: 'Producto Eliminado con éxito', data: result.rows });
     }

@@ -2,7 +2,7 @@ const pool = require('../config');
 
 const obtenerProductosPorCategoria = async (req: any,res:any) => {
     try {
-        const {categoria} = req.query;
+        const {categoria} = req.body;
         const result = await pool.query('SELECT * FROM productos WHERE categoria = $1', [categoria]);
         res.status(200).json({ message: 'Productos por Categoria', data: result.rows });
     } catch (error) {
@@ -24,7 +24,7 @@ const mostrarProductos = async (req:any,res:any) => {
 
 const buscarProducto = async (req: any,res:any) => {
     try {
-        const {nombre} = req.quer;
+        const {nombre} = req.query;
         const result = await pool.query('SELECT * FROM productos WHERE nombre = $1', [nombre]);
         res.status(200).json({ message: 'Producto Econtrado con éxito', data: result.rows });
     } catch (error) {
@@ -35,7 +35,7 @@ const buscarProducto = async (req: any,res:any) => {
 
 const eliminarProducto = async (req:any,res:any) => {
     try {
-        const {id} = req.quer;
+        const {id} = req.query;
         const result = await pool.query('DELETE FROM productos WHERE id = $1', [id]);
         res.status(200).json({ message: 'Producto Eliminado con éxito', data: result.rows });
     } catch (error) {
