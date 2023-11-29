@@ -19,7 +19,7 @@ const SECRET_KEY = (_a = process.env.JWT_SECRET_KEY) !== null && _a !== void 0 ?
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const saltRounds = 10; // Define the saltRounds variable
 const crearCuenta = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { nombre, contrasenia } = req.query;
+    const { nombre, contrasenia, correo } = req.body;
     try {
         const result = yield pool.query('SELECT * FROM usuarios WHERE nombre = $1', [nombre]);
         const usuariosEncontrados = result.rows;
@@ -29,10 +29,12 @@ const crearCuenta = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         else {
             // Generar la "sal" utilizando bcrypt.genSalt
             const salt = yield bcrypt_1.default.genSalt(saltRounds);
+            console.log(contrasenia);
+            console.log(salt);
             // Cifrar la contraseña utilizando la sal
             const hashedPassword = yield bcrypt_1.default.hash(contrasenia, salt);
             // Insertar el nuevo usuario en la base de datos
-            yield pool.query('INSERT INTO usuarios (nombre, contrasenia) VALUES ($1, $2)', [nombre, hashedPassword]);
+            yield pool.query('INSERT INTO usuarios (nombre, contrasenia, correo) VALUES ($1, $2,$3)', [nombre, hashedPassword, correo]);
             res.status(200).json({ message: 'Usuario creado con éxito' });
         }
     }
@@ -54,7 +56,7 @@ const obtenerUsuarios = (req, res) => __awaiter(void 0, void 0, void 0, function
 });
 const buscarUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { nombre } = req.query;
+        const { nombre } = req.body;
         const result = yield pool.query('SELECT * FROM usuarios WHERE nombre = $1', [nombre]);
         res.status(200).json({ message: 'Usuario Econtrado con éxito', data: result.rows });
     }
@@ -65,7 +67,7 @@ const buscarUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* 
 });
 const eliminarUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { id } = req.query;
+        const { id } = req.body;
         const result = yield pool.query('DELETE FROM usuarios WHERE id = $1', [id]);
         res.status(200).json({ message: 'Usuario Eliminado con éxito', data: result.rows });
     }
@@ -76,7 +78,7 @@ const eliminarUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function
 });
 const cambiarNombreUsuario = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { nuevoNombre, id } = req.query;
+        const { nuevoNombre, id } = req.body;
         const result = yield pool.query('UPDATE usuarios SET nombre = $1 WHERE id = $2', [nuevoNombre, id]);
         res.status(200).json({ message: 'Usuario actualizado con éxito', data: result.rows });
     }
@@ -87,8 +89,8 @@ const cambiarNombreUsuario = (req, res) => __awaiter(void 0, void 0, void 0, fun
 });
 const cambiarCorreo = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { id, nuevoCorreo } = req.query;
-        const result = yield pool.query('UPDATE usuarios SET correo = $1 WHERE id = $2', [id, nuevoCorreo]);
+        const { id, correo } = req.body;
+        const result = yield pool.query('UPDATE usuarios SET correo = $1 WHERE id = $2', [correo, id]);
         res.status(200).json({ message: 'Usuario actualizado con éxito', data: result.rows });
     }
     catch (error) {
@@ -110,14 +112,14 @@ const cambiarContrasena = (req, res) => __awaiter(void 0, void 0, void 0, functi
     }
 });
 const iniciarSesion = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    if (!req.body || !req.body.id || !req.body.contrasenia) {
+    if (!req.body || !req.body.correo || !req.body.contrasenia) {
         res.status(400).send({
             message: 'Error: No se han recibido todos los datos necesarios',
         });
         return;
     }
-    const { id, contrasenia } = req.body;
-    const usuario = yield pool.query('SELECT * FROM usuarios WHERE id = $1', [id]);
+    const { correo, contrasenia } = req.body;
+    const usuario = yield pool.query('SELECT * FROM usuarios WHERE id = $1', [correo]);
     if (usuario.rows.length === 0) {
         res.status(404).send({
             message: 'El usuario no existe',
