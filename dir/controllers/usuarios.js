@@ -19,16 +19,20 @@ const SECRET_KEY = (_a = process.env.JWT_SECRET_KEY) !== null && _a !== void 0 ?
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const saltRounds = 10; // Define the saltRounds variable
 const crearCuenta = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { id, password } = req.query;
+    const { nombre, contrasenia } = req.query;
     try {
-        const result = yield pool.query('SELECT * FROM usuarios WHERE id = $1', [id]);
+        const result = yield pool.query('SELECT * FROM usuarios WHERE nombre = $1', [nombre]);
         const usuariosEncontrados = result.rows;
         if (usuariosEncontrados.length > 0) {
             res.status(400).json({ message: 'Usuario ya está registrado' });
         }
         else {
-            const hashedPassword = yield bcrypt_1.default.hash(password, saltRounds);
-            yield pool.query('INSERT INTO usuarios (id, contrasenia) VALUES ($1, $2)', [id, hashedPassword]);
+            // Generar la "sal" utilizando bcrypt.genSalt
+            const salt = yield bcrypt_1.default.genSalt(saltRounds);
+            // Cifrar la contraseña utilizando la sal
+            const hashedPassword = yield bcrypt_1.default.hash(contrasenia, salt);
+            // Insertar el nuevo usuario en la base de datos
+            yield pool.query('INSERT INTO usuarios (nombre, contrasenia) VALUES ($1, $2)', [nombre, hashedPassword]);
             res.status(200).json({ message: 'Usuario creado con éxito' });
         }
     }

@@ -21,6 +21,7 @@ app.use(require('./routes/rutaProductos'));
 app.use(require('./routes/rutasListaD'));
 app.use(require('./routes/rutasCarrito'));
 app.use(require('./routes/rutaCompra'));
+app.use(require('./routes/rutaTrivia'));
 
 
 

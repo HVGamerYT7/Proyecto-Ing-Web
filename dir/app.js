@@ -19,6 +19,7 @@ app.use(require('./routes/rutaProductos'));
 app.use(require('./routes/rutasListaD'));
 app.use(require('./routes/rutasCarrito'));
 app.use(require('./routes/rutaCompra'));
+app.use(require('./routes/rutaTrivia'));
 //app.listen(port);
 //console.log('Servidor corriendo en puerto 3000');
 /*app.get('/api/usuarios', async (req:any, res:any) => {

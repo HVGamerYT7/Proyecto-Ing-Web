@@ -6,23 +6,32 @@ const saltRounds = 10; // Define the saltRounds variable
 
 
 const crearCuenta = async (req: any, res: any) => {
-  const { id, password } = req.query;
+  const { nombre, contrasenia } = req.query;
+
   try {
-    const result = await pool.query('SELECT * FROM usuarios WHERE id = $1', [id]);
+    const result = await pool.query('SELECT * FROM usuarios WHERE nombre = $1', [nombre]);
     const usuariosEncontrados = result.rows;
 
     if (usuariosEncontrados.length > 0) {
       res.status(400).json({ message: 'Usuario ya está registrado' });
     } else {
-      const hashedPassword = await bcrypt.hash(password, saltRounds);
-      await pool.query('INSERT INTO usuarios (id, contrasenia) VALUES ($1, $2)', [id, hashedPassword]);
+      // Generar la "sal" utilizando bcrypt.genSalt
+      const salt = await bcrypt.genSalt(saltRounds);
+
+      // Cifrar la contraseña utilizando la sal
+      const hashedPassword = await bcrypt.hash(contrasenia, salt);
+
+      // Insertar el nuevo usuario en la base de datos
+      await pool.query('INSERT INTO usuarios (nombre, contrasenia) VALUES ($1, $2)', [nombre, hashedPassword]);
+
       res.status(200).json({ message: 'Usuario creado con éxito' });
     }
   } catch (error) {
     console.error('Error al realizar la consulta:', error);
     res.status(500).send('Error interno del servidor');
   }
-}
+};
+
 
 
 const obtenerUsuarios = async(req:any,res:any) => {
