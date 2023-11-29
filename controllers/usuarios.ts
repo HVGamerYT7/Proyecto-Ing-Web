@@ -125,7 +125,7 @@ const iniciarSesion = async (req: any, res: any) => {
     return;
   }
   const { correo, contrasenia } = req.body;
-  const usuario = await pool.query('SELECT * FROM usuarios WHERE id = $1', [correo]);
+  const usuario = await pool.query('SELECT * FROM usuarios WHERE correo = $1', [correo]);
   if (usuario.rows.length === 0) {
     res.status(404).send({
       message: 'El usuario no existe',

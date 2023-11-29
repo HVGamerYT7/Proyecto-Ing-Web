@@ -119,7 +119,7 @@ const iniciarSesion = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         return;
     }
     const { correo, contrasenia } = req.body;
-    const usuario = yield pool.query('SELECT * FROM usuarios WHERE id = $1', [correo]);
+    const usuario = yield pool.query('SELECT * FROM usuarios WHERE correo = $1', [correo]);
     if (usuario.rows.length === 0) {
         res.status(404).send({
             message: 'El usuario no existe',
